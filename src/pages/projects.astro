@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { projectCards } from '../data/site';
+---
+<BaseLayout path="/projects" title="Projects">
+  <section class="page-hero">
+    <div class="container narrow">
+      <SectionHeading eyebrow="Portfolio" title="Projects" intro="Research, challenge, product, mentoring, and translational projects organized as a portfolio site rather than a plain CV list." />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="feature-grid two-cols">
+        {projectCards.map((project) => (
+          <article class="project-card featured">
+            <div class="project-head">
+              <h3>{project.title}</h3>
+              <span class="tag">{project.tag}</span>
+            </div>
+            <p>{project.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

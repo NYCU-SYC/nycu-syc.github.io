@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { education, experience, honors, innovation, patents, skills, siteMeta } from '../data/site';
+---
+<BaseLayout path="/cv" title="Curriculum Vitae">
+  <section class="page-hero">
+    <div class="container narrow row-between mobile-stack">
+      <div>
+        <SectionHeading eyebrow="Curriculum Vitae" title="Academic CV" intro="A web-based presentation of the current CV for quick reading and portfolio-style navigation." />
+      </div>
+      <a class="button primary cv-download" href={siteMeta.cvPdf}>Download PDF</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading eyebrow="Education" title="Academic Training" />
+      <div class="stack-cards">
+        {education.map((item) => (
+          <article class="info-card">
+            <div class="row-between gap">
+              <div>
+                <h3>{item.school}</h3>
+                <p class="muted-copy">{item.degree}</p>
+              </div>
+              <span class="pill">{item.period}</span>
+            </div>
+            {item.detail && <p class="subtle-text">{item.detail}</p>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <SectionHeading eyebrow="Research & Leadership" title="Experience" />
+      <div class="timeline-list">
+        {experience.map((item) => (
+          <article class="timeline-card">
+            <div class="row-between gap align-start">
+              <div>
+                <h3>{item.org}</h3>
+                <p class="muted-copy">{item.role}</p>
+              </div>
+              <span class="pill">{item.period}</span>
+            </div>
+            <ul class="bullet-list">
+              {item.bullets.map((bullet) => <li>{bullet}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container feature-grid three-cols">
+      <div>
+        <SectionHeading eyebrow="Honors" title="Selected Awards" />
+        <article class="info-card"><ul class="bullet-list compact">{honors.map((item) => <li>{item}</li>)}</ul></article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="Translation" title="Innovation" />
+        <article class="info-card"><ul class="bullet-list compact">{innovation.map((item) => <li>{item}</li>)}</ul></article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="IP" title="Patents" />
+        <article class="info-card"><ul class="bullet-list compact">{patents.map((item) => <li>{item}</li>)}</ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container two-column-layout">
+      <div>
+        <SectionHeading eyebrow="Technical Skills" title="Methods & Tooling" />
+        <article class="info-card">
+          <h3>Programming / Frameworks</h3>
+          <div class="tag-wrap">{skills.programming.map((s) => <span class="tag soft">{s}</span>)}</div>
+          <h3 class="mt-24">Methods</h3>
+          <div class="tag-wrap">{skills.methods.map((s) => <span class="tag soft">{s}</span>)}</div>
+        </article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="Evaluation" title="Applied Strengths" />
+        <article class="info-card">
+          <p>{skills.evaluation}</p>
+          <hr class="divider" />
+          <p><strong>Languages:</strong> {skills.languages}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

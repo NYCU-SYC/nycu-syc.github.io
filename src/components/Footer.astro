@@ -1,0 +1,16 @@
+---
+import { navItems, siteMeta } from '../data/site';
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-name">© 2026 {siteMeta.title}</div>
+      <div class="footer-note">Academic website and CV portfolio.</div>
+    </div>
+    <div class="footer-links">
+      {navItems.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </div>
+  </div>
+</footer>
