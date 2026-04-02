@@ -21,9 +21,10 @@ export const researchInterests =
   'Computer vision, medical image analysis, multimodal learning, generative modeling, large language models, and vision-language systems for trustworthy AI in brain tumor analysis and clinically grounded report generation.';
 
 export const heroHighlights = [
-  { value: 'AOCR Champion', label: 'International radiology AI challenge winner' },
-  { value: 'MedIA', label: '1st-author journal manuscript under review' },
-  { value: '4 Oral Talks', label: 'Conference presentations across FOM and IEEE AMLDS' },
+  { value: 'AOCR & Awards', label: 'AOCR Kaggle AI Challenge Champion, and recipient of the National Innovation Award and AI Application Competition.' },
+  { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
+  { value: 'AI Mentor', label: 'Served as an AI Poster Mentor at StanCode, leading student teams in hands-on AI project deployments.' },
+  { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
   { value: '4.11 / 4.30', label: 'Direct-entry Ph.D. GPA at NYCU' }
 ];
 
@@ -295,7 +296,7 @@ export const projectCards = [
       'An AI-assisted rehabilitation platform designed for home and clinical environments, developed under CTO leadership with a focus on functional assessment, workflow design, and translational deployment.',
     bullets: [
       'Led technical strategy, system architecture, AI workflow design, and prototype development.',
-      'Recognized as a success-case project by Taiwan Ministry of Education programs.',
+      'Selected as a Success Case on Taiwan Ministry of Education\'s College Innovation and Entrepreneurship Simulation Learning Platform.',
       'Advanced through FITI and continued into entrepreneurship-oriented development programs.'
     ]
   },
