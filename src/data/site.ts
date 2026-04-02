@@ -26,7 +26,8 @@ export const heroHighlights = [
   { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
   { value: 'AI Poster Mentor', label: 'Served as an AI Poster Mentor at StanCode, leading student teams in hands-on AI project deployments.' },
   { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
-  { value: '4.11 / 4.30', label: 'Direct-entry Ph.D. GPA at NYCU' }
+  { value: '4.11 / 4.30', label: 'Direct-entry Ph.D. GPA at NYCU' },
+  { value: '7 Publications', label: 'Authored 3 journal papers (with 1st-author at MedIA IF=11.8 under review) and 4 accepted conference papers (all Oral Presentations).' }
 ];
 
 export const homeQuickFacts = [
@@ -250,6 +251,34 @@ export const projectCards = [
     ]
   },
   {
+    title: 'AItewan DeepBT Detector–Plus',
+    org: 'AItewan BioMedical Technology Inc.',
+    role: 'Senior AI Engineer & Product Manager',
+    period: 'Ongoing',
+    tag: 'Medical AI Product',
+    desc:
+      'A clinically oriented brain tumor AI product successfully transitioning from research to clinical validation. It has obtained Taiwan FDA (TFDA) approval and is currently in the active application process for U.S. FDA clearance. It is now officially deployed and in actual clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
+    bullets: [
+      'Successfully advanced the system through rigorous TFDA certification pipelines.',
+      'Led the product integration and deployment across multiple top-tier medical centers in Taiwan.',
+      'Bridged the gap between advanced medical AI research and real-world clinical applications.'
+    ]
+  },
+  {
+    title: 'AItewan DeepBT Detector–A Plus',
+    org: 'AItewan BioMedical Technology Inc.',
+    role: 'Senior AI Engineer & Product Manager',
+    period: 'Ongoing',
+    tag: 'Medical AI Product',
+    desc:
+      'An advanced brain tumor AI product driving the next generation of diagnostics. Strongly positioned for both Taiwan FDA (TFDA) and U.S. FDA medical device applications. Like its predecessor, this system has already been deployed for clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
+    bullets: [
+      'Accelerating regulatory compliance and application processes for upcoming TFDA and U.S. FDA approvals.',
+      'Achieved rapid clinical deployment and validation in major medical center workflows.',
+      'Demonstrates independent technical leadership and strong capabilities in establishing robust, product-facing medical AI.'
+    ]
+  }
+  {
     title: 'Medication Delivery Robot Mentoring Project',
     org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
     role: 'AI Poster Mentor',
@@ -346,34 +375,6 @@ export const projectCards = [
       'Built synthetic image generation workflows for data expansion and downstream detection support.',
       'Worked on RGB-to-infrared translation to strengthen cross-modal perception in restricted environments.',
       'Focused on practical deployment constraints for aerial computer vision systems.'
-    ]
-  },
-  {
-    title: 'AItewan DeepBT Detector–Plus',
-    org: 'AItewan BioMedical Technology Inc.',
-    role: 'Senior AI Engineer & Product Manager',
-    period: 'Ongoing',
-    tag: 'Medical AI Product',
-    desc:
-      'A clinically oriented brain tumor AI product successfully transitioning from research to clinical validation. It has obtained Taiwan FDA (TFDA) approval and is currently in the active application process for U.S. FDA clearance. It is now officially deployed and in actual clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
-    bullets: [
-      'Successfully advanced the system through rigorous TFDA certification pipelines.',
-      'Led the product integration and deployment across multiple top-tier medical centers in Taiwan.',
-      'Bridged the gap between advanced medical AI research and real-world clinical applications.'
-    ]
-  },
-  {
-    title: 'AItewan DeepBT Detector–A Plus',
-    org: 'AItewan BioMedical Technology Inc.',
-    role: 'Senior AI Engineer & Product Manager',
-    period: 'Ongoing',
-    tag: 'Medical AI Product',
-    desc:
-      'An advanced brain tumor AI product driving the next generation of diagnostics. Strongly positioned for both Taiwan FDA (TFDA) and U.S. FDA medical device applications. Like its predecessor, this system has already been deployed for clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
-    bullets: [
-      'Accelerating regulatory compliance and application processes for upcoming TFDA and U.S. FDA approvals.',
-      'Achieved rapid clinical deployment and validation in major medical center workflows.',
-      'Demonstrates independent technical leadership and strong capabilities in establishing robust, product-facing medical AI.'
     ]
   }
 ];
