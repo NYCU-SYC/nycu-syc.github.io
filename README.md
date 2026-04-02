@@ -1,13 +1,16 @@
-# Yi-Chen Sun Academic Website (Updated)
 
-This is an updated GitHub Pages package for Yi-Chen Sun's academic personal website.
+# Yi-Chen Sun GitHub Pages Website
 
-## Updated items
-- Added direct-entry Ph.D. background (without a Master's degree)
-- Added birth date and age
-- Added journal impact factors in Publications
-- Expanded Projects page with detailed project descriptions
-- Kept AItewan DeepBT Detector–Plus and AItewan DeepBT Detector–A Plus as separate projects
+This package contains an updated static academic website based on the current CV content.
 
-## Deployment
-Upload all files in this folder to the root of your GitHub Pages repository.
+## Files
+- `index.html` — homepage
+- `publications.html` — journal manuscripts and conference presentations
+- `projects.html` — expanded project portfolio
+- `cv.html` — web CV
+- `contact.html` — contact page
+- `styles.css` — shared site styling
+- `Yi-Chen_Sun_MIT_Stanford_CS_AI_CV.pdf` — downloadable CV PDF
+
+## Deploy
+Upload all files to the root of your GitHub Pages repository and let GitHub Pages rebuild from the `main` branch.
