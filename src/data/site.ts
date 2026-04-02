@@ -249,6 +249,10 @@ export const projectCards = [
     role: 'AI Poster Mentor',
     period: '2025–2026',
     tag: 'Mentoring',
+    links: [
+      { url: 'https://www.youtube.com/watch?v=lPeceu56i4k&list=PL6FWNwNPGCE69AJLQYmrkA5wPXB5dv64O&index=7', text: 'YouTube' },
+      { url: 'https://www.instagram.com/p/DNsYJpS2N-B/', text: 'Instagram' }
+    ],
     desc:
       'A healthcare-oriented student project focused on a smart medication delivery robot, combining computer vision, sensor fusion, autonomous navigation, and practical system design thinking.',
     bullets: [
@@ -263,6 +267,10 @@ export const projectCards = [
     role: 'AI Poster Mentor',
     period: '2025–2026',
     tag: 'Mentoring',
+    links: [
+      { url: 'https://www.youtube.com/watch?v=n2ykwdTq7KY&list=PL6FWNwNPGCE69AJLQYmrkA5wPXB5dv64O&index=4', text: 'YouTube' },
+      { url: 'https://www.instagram.com/p/DWRLzIhlDKH/', text: 'Instagram' }
+    ],
     desc:
       'A mentoring project on medication recognition and grounded medical education using image detection/classification, retrieval-augmented generation, and large language models.',
     bullets: [
@@ -277,6 +285,9 @@ export const projectCards = [
     role: 'Chief Technology Officer (CTO)',
     period: '2025–2026',
     tag: 'Innovation / Entrepreneurship',
+    links: [
+      { url: 'https://ssp.moe.gov.tw/cases/1387', text: 'View Project' }
+    ],
     desc:
       'An AI-assisted rehabilitation platform designed for home and clinical environments, developed under CTO leadership with a focus on functional assessment, workflow design, and translational deployment.',
     bullets: [
@@ -291,6 +302,10 @@ export const projectCards = [
     role: 'Research Team Leader',
     period: '2023–2024',
     tag: 'Challenge Champion',
+    links: [
+      { url: 'https://www.youtube.com/watch?v=mWsgQmneuAs', text: 'Watch Interview' },
+      { url: 'https://innoaward.taiwan-healthcare.org/award_detail.php?REFDOCTYPID=0r4ggllnka0x43sh&num=1&REFDOCID=0sq2hwchxfqj17e7', text: 'National Innovation Award' }
+    ],
     desc:
       'A 3D CT segmentation framework for acute appendicitis built for the AOCR Kaggle AI Challenge, emphasizing lesion-sensitive detection, localization, and clinically robust performance.',
     bullets: [

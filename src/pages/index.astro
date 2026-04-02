@@ -148,6 +148,15 @@ import {
               <span class="tag">{project.tag}</span>
             </div>
             <p>{project.desc}</p>
+            {project.links && project.links.length > 0 && (
+              <div class="button-row" style="margin-top: 1rem;">
+                {project.links.map((link) => (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" class="button secondary" style="padding: 0.6rem 1.1rem; font-size: 0.85rem;">
+                    {link.text}
+                  </a>
+                ))}
+              </div>
+            )}
           </article>
         ))}
       </div>

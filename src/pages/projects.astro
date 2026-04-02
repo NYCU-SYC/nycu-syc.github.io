@@ -30,6 +30,15 @@ import { projectCards } from '../data/site';
             <ul class="bullet-list compact project-bullets">
               {project.bullets.map((bullet) => <li>{bullet}</li>)}
             </ul>
+            {project.links && project.links.length > 0 && (
+              <div class="button-row" style="margin-top: 1.2rem;">
+                {project.links.map((link) => (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" class="button secondary" style="padding: 0.6rem 1.1rem; font-size: 0.85rem;">
+                    {link.text}
+                  </a>
+                ))}
+              </div>
+            )}
           </article>
         ))}
       </div>
