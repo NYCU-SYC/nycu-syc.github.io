@@ -97,7 +97,7 @@ export const experience = [
     ]
   },
   {
-    org: 'AOCR AI Challenge Project',
+    org: 'AOCR Kaggle AI Challenge Project',
     role: 'Research Team Leader',
     period: '2023–2024',
     bullets: [
@@ -159,19 +159,22 @@ export const conferencePresentations = [
     venue: 'FOM 2025',
     authorship: '1st author',
     title: 'Enhancing 3D MRI Brain Tumor Segmentation with Dynamic Window Filtering.',
-    note: 'Oral Presentation'
+    note: 'Oral Presentation',
+    link: 'https://www.focusonmicroscopy.org/2025-program-online/?source=pp&event_id=8024&tab=pdf&a_id=8736'
   },
   {
     venue: 'IEEE AMLDS 2025',
     authorship: '1st author',
     title: 'Lightweight 3D IDC-MambaUNet for Multi-Modal MRI Brain Tumor Segmentation Using Multi-Resolution Ensemble.',
-    note: 'Oral Presentation'
+    note: 'Oral Presentation',
+    link: 'https://ieeexplore.ieee.org/abstract/document/11159345'
   },
   {
     venue: 'IEEE AMLDS 2025',
     authorship: '2nd author',
     title: 'Real-time and Continuous AI Inference Workflow with PACS Integration.',
-    note: 'Oral Presentation'
+    note: 'Oral Presentation',
+    link: 'https://ieeexplore.ieee.org/abstract/document/11159362'
   },
   {
     venue: 'IEEE AMLDS 2026',
@@ -297,8 +300,8 @@ export const projectCards = [
     ]
   },
   {
-    title: 'AOCR AI Challenge: Acute Appendicitis CT Segmentation',
-    org: 'AOCR AI Challenge Project',
+    title: 'AOCR Kaggle AI Challenge: Acute Appendicitis CT Segmentation',
+    org: 'AOCR Kaggle AI Challenge Project',
     role: 'Research Team Leader',
     period: '2023–2024',
     tag: 'Challenge Champion',
@@ -344,30 +347,30 @@ export const projectCards = [
   },
   {
     title: 'AItewan DeepBT Detector–Plus',
-    org: 'Translational Innovation',
-    role: 'Co-developer',
+    org: 'AItewan BioMedical Technology',
+    role: 'Senior AI Engineer & Product Manager',
     period: 'Ongoing',
     tag: 'Medical AI Product',
     desc:
-      'A clinically oriented brain tumor AI product developed with translational goals, already associated with TFDA medical device approval and ongoing U.S. FDA application work.',
+      'A clinically oriented brain tumor AI product successfully transitioning from research to clinical validation. It has obtained Taiwan FDA (TFDA) approval and is currently in the active application process for U.S. FDA clearance. It is now officially deployed and in actual clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
     bullets: [
-      'Represents direct experience with clinically oriented product development.',
-      'Connects technical medical AI research with real-world deployment pathways.',
-      'Highlights translational relevance beyond purely academic research.'
+      'Successfully advanced the system through rigorous TFDA certification pipelines.',
+      'Led the product integration and deployment across multiple top-tier medical centers in Taiwan.',
+      'Bridged the gap between advanced medical AI research and real-world clinical applications.'
     ]
   },
   {
     title: 'AItewan DeepBT Detector–A Plus',
-    org: 'Translational Innovation',
-    role: 'Independent Developer',
+    org: 'AItewan BioMedical Technology',
+    role: 'Senior AI Engineer & Product Manager',
     period: 'Ongoing',
     tag: 'Medical AI Product',
     desc:
-      'An independently developed brain tumor AI product positioned for TFDA and U.S. FDA medical device applications, reflecting continued work in clinically deployable medical AI.',
+      'An advanced brain tumor AI product driving the next generation of diagnostics. Strongly positioned for both Taiwan FDA (TFDA) and U.S. FDA medical device applications. Like its predecessor, this system has already been deployed for clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
     bullets: [
-      'Strengthens the independent technical leadership aspect of the translational portfolio.',
-      'Extends brain tumor AI research into product-facing implementation.',
-      'Demonstrates continuity between research, innovation, and application.'
+      'Accelerating regulatory compliance and application processes for upcoming TFDA and U.S. FDA approvals.',
+      'Achieved rapid clinical deployment and validation in major medical center workflows.',
+      'Demonstrates independent technical leadership and strong capabilities in establishing robust, product-facing medical AI.'
     ]
   }
 ];

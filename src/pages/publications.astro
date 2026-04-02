@@ -22,6 +22,13 @@ import { journalManuscripts, conferencePresentations } from '../data/site';
               <span class="pub-status">{paper.status}</span>
             </div>
             <h3>{paper.title}</h3>
+            {paper.link && (
+              <div class="button-row" style="margin-top: 1rem;">
+                <a href={paper.link} target="_blank" rel="noopener noreferrer" class="button secondary" style="padding: 0.5rem 1rem; font-size: 0.82rem;">
+                  View Publication
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>
@@ -40,6 +47,13 @@ import { journalManuscripts, conferencePresentations } from '../data/site';
               <span class="pub-status">{paper.authorship}</span>
             </div>
             <h3>{paper.title}</h3>
+            {paper.link && (
+              <div class="button-row" style="margin-top: 1rem;">
+                <a href={paper.link} target="_blank" rel="noopener noreferrer" class="button secondary" style="padding: 0.5rem 1rem; font-size: 0.82rem;">
+                  View Publication
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>
