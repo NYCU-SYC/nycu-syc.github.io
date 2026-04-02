@@ -348,7 +348,7 @@ export const projectCards = [
   },
   {
     title: 'AItewan DeepBT Detector–Plus',
-    org: 'AItewan BioMedical Technology',
+    org: 'AItewan BioMedical Technology Inc.',
     role: 'Senior AI Engineer & Product Manager',
     period: 'Ongoing',
     tag: 'Medical AI Product',
@@ -362,7 +362,7 @@ export const projectCards = [
   },
   {
     title: 'AItewan DeepBT Detector–A Plus',
-    org: 'AItewan BioMedical Technology',
+    org: 'AItewan BioMedical Technology Inc.',
     role: 'Senior AI Engineer & Product Manager',
     period: 'Ongoing',
     tag: 'Medical AI Product',
