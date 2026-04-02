@@ -6,6 +6,7 @@ export const siteMeta = {
   email: 's.chenney0830@gmail.com',
   phone: '+886 981116830',
   location: 'New Taipei City, Taiwan',
+  birthdate: 'August 30, 2002 (Age 23)',
   cvPdf: '/Yi-Chen_Sun_MIT_Stanford_CS_AI_CV.pdf'
 };
 
@@ -21,9 +22,9 @@ export const researchInterests =
   'Computer vision, medical image analysis, multimodal learning, generative modeling, large language models, and vision-language systems for trustworthy AI in brain tumor analysis and clinically grounded report generation.';
 
 export const heroHighlights = [
-  { value: 'AOCR & Awards', label: 'AOCR Kaggle AI Challenge Champion, and recipient of the National Innovation Award and AI Application Competition.' },
+  { value: 'AOCR & Awards', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
   { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
-  { value: 'AI Mentor', label: 'Served as an AI Poster Mentor at StanCode, leading student teams in hands-on AI project deployments.' },
+  { value: 'AI Poster Mentor', label: 'Served as an AI Poster Mentor at StanCode, leading student teams in hands-on AI project deployments.' },
   { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
   { value: '4.11 / 4.30', label: 'Direct-entry Ph.D. GPA at NYCU' }
 ];
@@ -31,7 +32,8 @@ export const heroHighlights = [
 export const homeQuickFacts = [
   'Direct-entry Ph.D. student at National Yang Ming Chiao Tung University, Institute of Biophotonics.',
   'Research focus: brain tumor MRI analysis, lesion-sensitive segmentation, and clinically grounded report generation.',
-  'Selected strengths include 1st-author work in Medical Image Analysis under review, AOCR Challenge Championship, and translational medical AI experience with patents and regulatory-facing products.'
+  'Authored 3 submitted journal papers, including a first-author manuscript to Medical Image Analysis (IF=11.8) currently under peer review, alongside 4 accepted conference papers (all selected for Oral Presentations).',
+  'Selected strengths include AOCR Challenge Championship and translational medical AI experience with patents and regulatory-facing products.'
 ];
 
 export const homeFeatureCards = [

@@ -34,6 +34,12 @@ import {
             <dt>Location</dt>
             <dd>{siteMeta.location}</dd>
           </div>
+          {siteMeta.birthdate && (
+            <div>
+              <dt>Date of Birth</dt>
+              <dd>{siteMeta.birthdate}</dd>
+            </div>
+          )}
         </dl>
         <div class="button-row stack">
           <a class="button primary" href={siteMeta.cvPdf}>Download CV</a>
