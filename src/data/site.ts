@@ -21,10 +21,35 @@ export const researchInterests =
   'Computer vision, medical image analysis, multimodal learning, generative modeling, large language models, and vision-language systems for trustworthy AI in brain tumor analysis and clinically grounded report generation.';
 
 export const heroHighlights = [
-  { value: '4.11 / 4.30', label: 'Current Ph.D. GPA' },
-  { value: 'AOCR Champion', label: 'International challenge achievement' },
-  { value: 'TFDA + FDA', label: 'Translational medical AI experience' },
-  { value: '11,000+', label: 'Multicenter MRI studies referenced in brain tumor research' }
+  { value: 'AOCR Champion', label: 'International radiology AI challenge winner' },
+  { value: 'MedIA', label: '1st-author journal manuscript under review' },
+  { value: '4 Oral Talks', label: 'Conference presentations across FOM and IEEE AMLDS' },
+  { value: '4.11 / 4.30', label: 'Direct-entry Ph.D. GPA at NYCU' }
+];
+
+export const homeQuickFacts = [
+  'Direct-entry Ph.D. student at National Yang Ming Chiao Tung University, Institute of Biophotonics.',
+  'Research focus: brain tumor MRI analysis, lesion-sensitive segmentation, and clinically grounded report generation.',
+  'Selected strengths include 1st-author work in Medical Image Analysis under review, AOCR Challenge Championship, and translational medical AI experience with patents and regulatory-facing products.'
+];
+
+export const homeFeatureCards = [
+  {
+    title: 'Research Focus',
+    desc: 'Brain tumor MRI analysis, lesion-sensitive segmentation, multimodal learning, and vision-language systems for clinical report generation.'
+  },
+  {
+    title: 'Academic Momentum',
+    desc: 'Direct-entry Ph.D. training at NYCU with a current GPA of 4.11 / 4.30, along with ongoing journal manuscripts and oral presentations.'
+  },
+  {
+    title: 'Recognition',
+    desc: 'AOCR Kaggle AI Challenge Champion, National Innovation Award recipient, and winner of the AI Application Competition in Taiwan.'
+  },
+  {
+    title: 'Translation',
+    desc: 'Experience spanning translational medical AI products, patents, clinical workflow integration, and innovation-oriented technical leadership.'
+  }
 ];
 
 export const education = [
@@ -63,7 +88,7 @@ export const experience = [
     ]
   },
   {
-    org: 'StanCode',
+    org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
     role: 'AI Poster Mentor',
     period: '2025–2026',
     bullets: [
@@ -192,62 +217,142 @@ export const skills = {
 export const projectCards = [
   {
     title: 'End-to-End Brain Tumor SRS Clinical AI System',
-    tag: 'NYCU',
+    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
+    role: 'Ph.D. Researcher',
+    period: '2024–Present',
+    tag: 'Flagship Research',
     desc:
-      'An integrated research effort covering lesion-sensitive segmentation, quantitative MRI analysis, contrast-free inference, constrained VLM-based report generation, and DICOM SEG/SR output for PACS-compatible clinical deployment.'
+      'An integrated research program centered on brain tumor stereotactic radiosurgery, combining lesion-sensitive segmentation, quantitative MRI analysis, contrast-free inference, constrained VLM-based report generation, and PACS-compatible DICOM SEG/SR outputs.',
+    bullets: [
+      'Built around brain tumor MRI analysis with emphasis on clinically grounded model evaluation and report generation.',
+      'Includes work on DBI-MambaUNet, SA-FTL, knowledge distillation, and constrained vision-language systems.',
+      'Serves as the main academic research track of the current direct-entry Ph.D. program at NYCU.'
+    ]
   },
   {
     title: 'DBI-MambaUNet + SA-FTL for Micro-Lesion Segmentation',
+    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
+    role: 'Ph.D. Researcher',
+    period: '2024–Present',
     tag: 'Method Development',
     desc:
-      'A segmentation framework designed for multi-subtype brain tumor micro-lesion analysis in stereotactic radiosurgery, with explicit focus on sub-4 mm lesion sensitivity.'
-  },
-  {
-    title: 'AItewan DeepBT Detector–Plus',
-    tag: 'Translational Medical AI',
-    desc:
-      'Co-developed a clinically oriented brain tumor AI product with TFDA clearance already obtained and a U.S. FDA application pending.'
-  },
-  {
-    title: 'AItewan DeepBT Detector–A Plus',
-    tag: 'Independent Development',
-    desc:
-      'Independently developed a brain tumor AI product with TFDA and U.S. FDA medical device applications pending.'
-  },
-  {
-    title: 'NOVATERA: ICF Smart AI Rehabilitation System',
-    tag: 'Innovation / Entrepreneurship',
-    desc:
-      'An AI-assisted rehabilitation platform for home and clinical use, built under CTO leadership with external recognition from MOE innovation programs and ongoing entrepreneurship participation.'
-  },
-  {
-    title: 'AOCR AI Challenge: Acute Appendicitis CT Segmentation',
-    tag: 'Challenge Champion',
-    desc:
-      'A 3D CT segmentation framework for appendicitis that emphasized lesion-sensitive localization and clinically robust performance, resulting in championship at the AOCR Kaggle AI Challenge.'
+      'A dedicated method-development project for multi-subtype brain tumor micro-lesion analysis in stereotactic radiosurgery, with explicit focus on improving lesion sensitivity for small lesions.',
+    bullets: [
+      'Core manuscript currently under review at Medical Image Analysis.',
+      'Designed to improve sensitivity for sub-4 mm lesions while maintaining clinical relevance.',
+      'Represents the most method-centric part of the current Ph.D. work.'
+    ]
   },
   {
     title: 'Medication Delivery Robot Mentoring Project',
-    tag: 'StanCode',
+    org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
+    role: 'AI Poster Mentor',
+    period: '2025–2026',
+    tag: 'Mentoring',
     desc:
-      'Mentored a student healthcare AI team developing a smart medication delivery robot, supporting system design, evaluation planning, and practical application thinking.'
+      'A healthcare-oriented student project focused on a smart medication delivery robot, combining computer vision, sensor fusion, autonomous navigation, and practical system design thinking.',
+    bullets: [
+      'Mentored students on technical framing, presentation logic, and healthcare application planning.',
+      'Supported system design discussions and evaluation planning.',
+      'Highlighted safe, practical, and deployment-oriented AI thinking in student work.'
+    ]
   },
   {
     title: 'Medication Recognition App with RAG + LLM',
-    tag: 'StanCode',
+    org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
+    role: 'AI Poster Mentor',
+    period: '2025–2026',
+    tag: 'Mentoring',
     desc:
-      'Mentored a medication-recognition and educational assistant project based on image classification, retrieval-augmented generation, and LLM-based answer generation with citation grounding.'
+      'A mentoring project on medication recognition and grounded medical education using image detection/classification, retrieval-augmented generation, and large language models.',
+    bullets: [
+      'Guided system architecture design for image-based medication recognition.',
+      'Emphasized grounded responses, citation-aware output, and hallucination risk reduction.',
+      'Strengthened the practical educational value of the project in healthcare settings.'
+    ]
+  },
+  {
+    title: 'NOVATERA: ICF Smart AI Rehabilitation System',
+    org: 'NOVATERA (ICF Smart AI Rehabilitation System)',
+    role: 'Chief Technology Officer (CTO)',
+    period: '2025–2026',
+    tag: 'Innovation / Entrepreneurship',
+    desc:
+      'An AI-assisted rehabilitation platform designed for home and clinical environments, developed under CTO leadership with a focus on functional assessment, workflow design, and translational deployment.',
+    bullets: [
+      'Led technical strategy, system architecture, AI workflow design, and prototype development.',
+      'Recognized as a success-case project by Taiwan Ministry of Education programs.',
+      'Advanced through FITI and continued into entrepreneurship-oriented development programs.'
+    ]
+  },
+  {
+    title: 'AOCR AI Challenge: Acute Appendicitis CT Segmentation',
+    org: 'AOCR AI Challenge Project',
+    role: 'Research Team Leader',
+    period: '2023–2024',
+    tag: 'Challenge Champion',
+    desc:
+      'A 3D CT segmentation framework for acute appendicitis built for the AOCR Kaggle AI Challenge, emphasizing lesion-sensitive detection, localization, and clinically robust performance.',
+    bullets: [
+      'Led the research team across model design, optimization, and evaluation.',
+      'Won the championship in a challenge organized under AOCR, one of the three major international radiology conferences.',
+      'Generated downstream impact including awards, patent protection, and media visibility.'
+    ]
   },
   {
     title: 'Interactive Museum Imaging System',
-    tag: 'Omniguider',
+    org: 'Omniguider Inc.',
+    role: 'Research / Development Project | Team Leader',
+    period: '2023–2024',
+    tag: 'Generative Vision',
     desc:
-      'A generative imaging system for the National Museum of Natural Science using ControlNet, LoRA, diffusion-based generation, and face-swapping techniques to improve realism and interaction.'
+      'An interactive generative imaging system for the National Museum of Natural Science that used controllable diffusion workflows and exhibit-specific adaptation to improve realism and user interaction.',
+    bullets: [
+      'Implemented ControlNet and LoRA for controllable, exhibit-aware generation.',
+      'Integrated diffusion-based generation and face-swapping techniques to improve realism.',
+      'Received the Excellence Award in the AI Application Challenge hosted by Taiwan’s Ministry of Digital Affairs.'
+    ]
   },
   {
     title: 'Drone Vision Data Expansion and RGB-to-Infrared Translation',
-    tag: 'NCSIST',
+    org: 'National Chung-Shan Institute of Science and Technology',
+    role: 'Research Project Intern / Member',
+    period: '2022–2023',
+    tag: 'Aerial Vision',
     desc:
-      'cGAN-based synthetic image generation and cross-modal translation workflows built to address data scarcity and hardware-constrained deployment for drone vision tasks.'
+      'A cGAN-based synthetic data and cross-modal translation project addressing data scarcity and hardware-constrained deployment in drone vision scenarios.',
+    bullets: [
+      'Built synthetic image generation workflows for data expansion and downstream detection support.',
+      'Worked on RGB-to-infrared translation to strengthen cross-modal perception in restricted environments.',
+      'Focused on practical deployment constraints for aerial computer vision systems.'
+    ]
+  },
+  {
+    title: 'AItewan DeepBT Detector–Plus',
+    org: 'Translational Innovation',
+    role: 'Co-developer',
+    period: 'Ongoing',
+    tag: 'Medical AI Product',
+    desc:
+      'A clinically oriented brain tumor AI product developed with translational goals, already associated with TFDA medical device approval and ongoing U.S. FDA application work.',
+    bullets: [
+      'Represents direct experience with clinically oriented product development.',
+      'Connects technical medical AI research with real-world deployment pathways.',
+      'Highlights translational relevance beyond purely academic research.'
+    ]
+  },
+  {
+    title: 'AItewan DeepBT Detector–A Plus',
+    org: 'Translational Innovation',
+    role: 'Independent Developer',
+    period: 'Ongoing',
+    tag: 'Medical AI Product',
+    desc:
+      'An independently developed brain tumor AI product positioned for TFDA and U.S. FDA medical device applications, reflecting continued work in clinically deployable medical AI.',
+    bullets: [
+      'Strengthens the independent technical leadership aspect of the translational portfolio.',
+      'Extends brain tumor AI research into product-facing implementation.',
+      'Demonstrates continuity between research, innovation, and application.'
+    ]
   }
 ];

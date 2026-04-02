@@ -6,7 +6,7 @@ import { projectCards } from '../data/site';
 <BaseLayout path="/projects" title="Projects">
   <section class="page-hero">
     <div class="container narrow">
-      <SectionHeading eyebrow="Portfolio" title="Projects" intro="Research, challenge, product, mentoring, and translational projects organized as a portfolio site rather than a plain CV list." />
+      <SectionHeading eyebrow="Project Portfolio" title="Projects" intro="Projects are organized around your CV content, with institution or organization shown in a strong blue block and role shown in a softer block for clearer visual hierarchy." />
     </div>
   </section>
 
@@ -14,12 +14,22 @@ import { projectCards } from '../data/site';
     <div class="container">
       <div class="feature-grid two-cols">
         {projectCards.map((project) => (
-          <article class="project-card featured">
-            <div class="project-head">
+          <article class="project-card project-card-rich featured">
+            <div class="project-meta-stack">
+              <span class="project-org-block">{project.org}</span>
+              <div class="project-role-row">
+                <span class="project-role-chip">{project.role}</span>
+                <span class="pill">{project.period}</span>
+              </div>
+            </div>
+            <div class="project-head project-head-column">
               <h3>{project.title}</h3>
               <span class="tag">{project.tag}</span>
             </div>
             <p>{project.desc}</p>
+            <ul class="bullet-list compact project-bullets">
+              {project.bullets.map((bullet) => <li>{bullet}</li>)}
+            </ul>
           </article>
         ))}
       </div>

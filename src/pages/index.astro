@@ -1,19 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
-import { heroHighlights, researchInterests, education, honors, projectCards, siteMeta } from '../data/site';
+import {
+  siteMeta,
+  researchInterests,
+  heroHighlights,
+  education,
+  honors,
+  projectCards,
+  homeQuickFacts,
+  homeFeatureCards
+} from '../data/site';
 ---
-<BaseLayout path="/" title="Home">
+<BaseLayout path="/">
   <section class="hero-section">
     <div class="container hero-grid">
       <aside class="profile-panel">
         <div class="profile-avatar">YS</div>
         <h1>{siteMeta.title}</h1>
-        <p class="profile-role">Ph.D. Researcher • Medical AI • Computer Vision</p>
+        <p class="profile-role">Direct-Entry Ph.D. Student • Medical AI • Computer Vision</p>
         <dl class="contact-grid">
-          <div><dt>Email</dt><dd>{siteMeta.email}</dd></div>
-          <div><dt>Phone</dt><dd>{siteMeta.phone}</dd></div>
-          <div><dt>Location</dt><dd>{siteMeta.location}</dd></div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href={`mailto:${siteMeta.email}`}>{siteMeta.email}</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd>{siteMeta.phone}</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>{siteMeta.location}</dd>
+          </div>
         </dl>
         <div class="button-row stack">
           <a class="button primary" href={siteMeta.cvPdf}>Download CV</a>
@@ -22,18 +40,25 @@ import { heroHighlights, researchInterests, education, honors, projectCards, sit
       </aside>
 
       <div class="hero-content">
-        <div class="hero-card hero-intro">
-          <p class="eyebrow">Research Profile</p>
-          <h2>Computer vision and multimodal AI for brain tumor analysis, clinically grounded report generation, and translational medical deployment.</h2>
+        <article class="hero-card hero-intro">
+          <span class="eyebrow">Academic Profile</span>
+          <h2>Brain tumor medical AI, multimodal imaging, and clinically grounded report generation.</h2>
+          <p class="lead">
+            Yi-Chen Sun is a direct-entry Ph.D. student at National Yang Ming Chiao Tung University working on
+            computer vision, medical image analysis, multimodal learning, and vision-language systems for trustworthy
+            brain tumor AI.
+          </p>
           <p>
-            I work at the intersection of computer vision, medical image analysis, multimodal learning, generative modeling, and vision-language systems.
-            My recent work focuses on lesion-sensitive brain tumor MRI analysis, contrast-free inference, DICOM-standardized clinical outputs, and PACS-compatible deployment.
+            His profile is strongest at the intersection of lesion-sensitive MRI modeling, clinical workflow thinking,
+            academic output, and translational medical AI development—making this website more than a CV list and more
+            like a curated research portfolio.
           </p>
           <div class="button-row">
-            <a class="button primary" href="/publications">View Publications</a>
-            <a class="button secondary" href="/projects">View Projects</a>
+            <a class="button primary" href="/projects">View Projects</a>
+            <a class="button secondary" href="/publications">View Publications</a>
           </div>
-        </div>
+        </article>
+
         <div class="metrics-grid">
           {heroHighlights.map((item) => (
             <article class="metric-card">
@@ -47,42 +72,40 @@ import { heroHighlights, researchInterests, education, honors, projectCards, sit
   </section>
 
   <section class="section">
-    <div class="container">
-      <SectionHeading eyebrow="Research Interests" title="Primary Interests" />
-      <div class="glass-card">
-        <p class="lead">{researchInterests}</p>
+    <div class="container two-column-layout">
+      <div>
+        <SectionHeading eyebrow="Research Interests" title="Current Focus" />
+        <article class="glass-card">
+          <p>{researchInterests}</p>
+          <div class="quick-list">
+            {homeQuickFacts.map((fact) => (
+              <div class="quick-item">{fact}</div>
+            ))}
+          </div>
+        </article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="Why This Profile Stands Out" title="Selected Advantages" />
+        <div class="feature-grid">
+          {homeFeatureCards.map((card) => (
+            <article class="feature-card accent-card">
+              <h3>{card.title}</h3>
+              <p>{card.desc}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section alt-bg">
-    <div class="container">
-      <SectionHeading eyebrow="Overview" title="What I Work On" />
-      <div class="feature-grid three-cols">
-        <article class="feature-card">
-          <h3>Brain Tumor MRI Analysis</h3>
-          <p>Lesion-sensitive segmentation, candidate refinement, micro-lesion detection, and quantitative analysis for stereotactic radiosurgery workflows.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Clinical Report Generation</h3>
-          <p>Structured report generation from MRI by integrating expert deep learning models with constrained vision-language systems.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Trustworthy Medical AI</h3>
-          <p>Knowledge distillation, contrast-free inference, DICOM-standardized outputs, and evaluation centered on lesion-wise clinical metrics.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
     <div class="container two-column-layout">
       <div>
         <SectionHeading eyebrow="Education" title="Academic Training" />
         <div class="stack-cards">
           {education.map((item) => (
             <article class="info-card">
-              <div class="row-between gap">
+              <div class="row-between gap align-start">
                 <div>
                   <h3>{item.school}</h3>
                   <p class="muted-copy">{item.degree}</p>
@@ -105,13 +128,20 @@ import { heroHighlights, researchInterests, education, honors, projectCards, sit
     </div>
   </section>
 
-  <section class="section alt-bg">
+  <section class="section">
     <div class="container">
-      <SectionHeading eyebrow="Selected Projects" title="Featured Work" intro="A quick view of major projects across research, translation, and innovation." />
+      <SectionHeading eyebrow="Selected Projects" title="Featured Work" intro="A curated set of the most representative projects from research, mentoring, challenge leadership, and translational AI." />
       <div class="feature-grid two-cols">
         {projectCards.slice(0, 6).map((project) => (
-          <article class="project-card">
-            <div class="project-head">
+          <article class="project-card project-card-rich">
+            <div class="project-meta-stack">
+              <span class="project-org-block">{project.org}</span>
+              <div class="project-role-row">
+                <span class="project-role-chip">{project.role}</span>
+                <span class="pill">{project.period}</span>
+              </div>
+            </div>
+            <div class="project-head project-head-column">
               <h3>{project.title}</h3>
               <span class="tag">{project.tag}</span>
             </div>
