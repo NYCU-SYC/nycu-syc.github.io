@@ -220,7 +220,7 @@ export const skills = {
 
 export const projectCards = [
   {
-    title: 'End-to-End Brain Tumor SRS Clinical AI System',
+    title: 'End-to-End Non-Contrast Brain Tumor SRS Clinical AI System',
     org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
     role: 'Ph.D. Researcher',
     period: '2024–Present',
