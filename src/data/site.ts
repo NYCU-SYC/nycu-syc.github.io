@@ -277,7 +277,7 @@ export const projectCards = [
       'Achieved rapid clinical deployment and validation in major medical center workflows.',
       'Demonstrates independent technical leadership and strong capabilities in establishing robust, product-facing medical AI.'
     ]
-  }
+  },
   {
     title: 'Medication Delivery Robot Mentoring Project',
     org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
