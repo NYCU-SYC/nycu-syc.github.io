@@ -226,11 +226,11 @@ export const projectCards = [
     period: '2024–Present',
     tag: 'Flagship Research',
     desc:
-      'An integrated research program centered on brain tumor stereotactic radiosurgery, combining lesion-sensitive segmentation, quantitative MRI analysis, contrast-free inference, constrained VLM-based report generation, and PACS-compatible DICOM SEG/SR outputs.',
+      'An integrated research program centered on brain tumor stereotactic radiosurgery. It features an advanced pipeline combining lesion-sensitive segmentation, quantitative MRI analysis, and constrained VLM-based report generation—all enabled on non-contrast MRI via knowledge distillation.',
     bullets: [
-      'Built around brain tumor MRI analysis with emphasis on clinically grounded model evaluation and report generation.',
-      'Includes work on DBI-MambaUNet, SA-FTL, knowledge distillation, and constrained vision-language systems.',
-      'Serves as the main academic research track of the current direct-entry Ph.D. program at NYCU.'
+      'Utilizes knowledge distillation to successfully detect and segment brain tumor lesions directly from non-contrast MRI scans.',
+      'Integrates non-contrast MRI lesion detection into a constrained vision-language system to automate clinically grounded report generation.',
+      'Encompasses core Ph.D. work on DBI-MambaUNet and SA-FTL while standardizing outputs into PACS-compatible DICOM SEG/SR.'
     ]
   },
   {
