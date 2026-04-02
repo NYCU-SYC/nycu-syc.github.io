@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { heroHighlights, researchInterests, education, honors, projectCards, siteMeta } from '../data/site';
+---
+<BaseLayout path="/" title="Home">
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <aside class="profile-panel">
+        <div class="profile-avatar">YS</div>
+        <h1>{siteMeta.title}</h1>
+        <p class="profile-role">Ph.D. Researcher • Medical AI • Computer Vision</p>
+        <dl class="contact-grid">
+          <div><dt>Email</dt><dd>{siteMeta.email}</dd></div>
+          <div><dt>Phone</dt><dd>{siteMeta.phone}</dd></div>
+          <div><dt>Location</dt><dd>{siteMeta.location}</dd></div>
+        </dl>
+        <div class="button-row stack">
+          <a class="button primary" href={siteMeta.cvPdf}>Download CV</a>
+          <a class="button secondary" href="/contact">Contact</a>
+        </div>
+      </aside>
+
+      <div class="hero-content">
+        <div class="hero-card hero-intro">
+          <p class="eyebrow">Research Profile</p>
+          <h2>Computer vision and multimodal AI for brain tumor analysis, clinically grounded report generation, and translational medical deployment.</h2>
+          <p>
+            I work at the intersection of computer vision, medical image analysis, multimodal learning, generative modeling, and vision-language systems.
+            My recent work focuses on lesion-sensitive brain tumor MRI analysis, contrast-free inference, DICOM-standardized clinical outputs, and PACS-compatible deployment.
+          </p>
+          <div class="button-row">
+            <a class="button primary" href="/publications">View Publications</a>
+            <a class="button secondary" href="/projects">View Projects</a>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          {heroHighlights.map((item) => (
+            <article class="metric-card">
+              <div class="metric-value">{item.value}</div>
+              <div class="metric-label">{item.label}</div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading eyebrow="Research Interests" title="Primary Interests" />
+      <div class="glass-card">
+        <p class="lead">{researchInterests}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <SectionHeading eyebrow="Overview" title="What I Work On" />
+      <div class="feature-grid three-cols">
+        <article class="feature-card">
+          <h3>Brain Tumor MRI Analysis</h3>
+          <p>Lesion-sensitive segmentation, candidate refinement, micro-lesion detection, and quantitative analysis for stereotactic radiosurgery workflows.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Clinical Report Generation</h3>
+          <p>Structured report generation from MRI by integrating expert deep learning models with constrained vision-language systems.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Trustworthy Medical AI</h3>
+          <p>Knowledge distillation, contrast-free inference, DICOM-standardized outputs, and evaluation centered on lesion-wise clinical metrics.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-column-layout">
+      <div>
+        <SectionHeading eyebrow="Education" title="Academic Training" />
+        <div class="stack-cards">
+          {education.map((item) => (
+            <article class="info-card">
+              <div class="row-between gap">
+                <div>
+                  <h3>{item.school}</h3>
+                  <p class="muted-copy">{item.degree}</p>
+                </div>
+                <span class="pill">{item.period}</span>
+              </div>
+              {item.detail && <p class="subtle-text">{item.detail}</p>}
+            </article>
+          ))}
+        </div>
+      </div>
+      <div>
+        <SectionHeading eyebrow="Selected Honors" title="Highlights" />
+        <div class="info-card">
+          <ul class="bullet-list compact">
+            {honors.slice(0, 4).map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <SectionHeading eyebrow="Selected Projects" title="Featured Work" intro="A quick view of major projects across research, translation, and innovation." />
+      <div class="feature-grid two-cols">
+        {projectCards.slice(0, 6).map((project) => (
+          <article class="project-card">
+            <div class="project-head">
+              <h3>{project.title}</h3>
+              <span class="tag">{project.tag}</span>
+            </div>
+            <p>{project.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

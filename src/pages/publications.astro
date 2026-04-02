@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { journalManuscripts, conferencePresentations } from '../data/site';
+---
+<BaseLayout path="/publications" title="Publications">
+  <section class="page-hero">
+    <div class="container narrow">
+      <SectionHeading eyebrow="Research Output" title="Publications" intro="Selected journal manuscripts and conference presentations drawn from the current academic CV." />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <SectionHeading eyebrow="Journal Manuscripts" title="Under Review" />
+      <div class="stack-cards">
+        {journalManuscripts.map((paper) => (
+          <article class="publication-card">
+            <div class="pub-meta">
+              <span class="tag">{paper.authorship}</span>
+              <span class="pub-venue">{paper.venue} (Impact Factor = {paper.impact})</span>
+              <span class="pub-status">{paper.status}</span>
+            </div>
+            <h3>{paper.title}</h3>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container narrow">
+      <SectionHeading eyebrow="Conference Presentations" title="Oral Presentations" />
+      <div class="stack-cards">
+        {conferencePresentations.map((paper) => (
+          <article class="publication-card">
+            <div class="pub-meta">
+              <span class="tag">{paper.note}</span>
+              <span class="pub-venue">{paper.venue}</span>
+              <span class="pub-status">{paper.authorship}</span>
+            </div>
+            <h3>{paper.title}</h3>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { siteMeta } from '../data/site';
+---
+<BaseLayout path="/contact" title="Contact">
+  <section class="page-hero">
+    <div class="container narrow">
+      <SectionHeading eyebrow="Get in Touch" title="Contact" intro="For academic collaboration, graduate applications, and professional communication." />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-column-layout">
+      <article class="contact-card emphasis">
+        <h3>Primary Contact</h3>
+        <dl class="contact-grid large">
+          <div><dt>Email</dt><dd><a href={`mailto:${siteMeta.email}`}>{siteMeta.email}</a></dd></div>
+          <div><dt>Phone</dt><dd>{siteMeta.phone}</dd></div>
+          <div><dt>Location</dt><dd>{siteMeta.location}</dd></div>
+        </dl>
+        <div class="button-row">
+          <a class="button primary" href={`mailto:${siteMeta.email}`}>Email Me</a>
+          <a class="button secondary" href={siteMeta.cvPdf}>Download CV</a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <h3>Website Notes</h3>
+        <ul class="bullet-list compact">
+          <li>This Astro version is structured as a reusable static site for GitHub Pages deployment.</li>
+          <li>Update contact links, Google Scholar, GitHub, LinkedIn, and profile photo as needed.</li>
+          <li>The downloadable CV PDF is served from the public directory for direct linking.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
