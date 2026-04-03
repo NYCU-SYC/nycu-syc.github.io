@@ -199,7 +199,7 @@ img { max-width: 100%; display: block; }
 .metric-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 132px;
   background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,248,253,0.98));
 }

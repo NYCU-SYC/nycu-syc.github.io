@@ -129,7 +129,7 @@ import {
         <SectionHeading eyebrow="Selected Honors" title="Highlights" />
         <div class="info-card">
           <ul class="bullet-list compact">
-            {honors.slice(0, 4).map((item) => <li>{item}</li>)}
+            {honors.map((item) => <li set:html={item} />)}
           </ul>
         </div>
       </div>
