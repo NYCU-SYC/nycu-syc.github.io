@@ -279,6 +279,41 @@ export const projectCards = [
     ]
   },
   {
+    title: 'NOVATERA: ICF Smart AI Rehabilitation System',
+    org: 'NOVATERA (ICF Smart AI Rehabilitation System)',
+    role: 'Chief Technology Officer (CTO)',
+    period: '2025–2026',
+    tag: 'Innovation / Entrepreneurship',
+    links: [
+      { url: 'https://ssp.moe.gov.tw/cases/1387', text: 'View Project' }
+    ],
+    desc:
+      'An AI-assisted rehabilitation platform designed for home and clinical environments, developed under CTO leadership with a focus on functional assessment, workflow design, and translational deployment.',
+    bullets: [
+      'Led technical strategy, system architecture, AI workflow design, and prototype development.',
+      'Selected as a Success Case on Taiwan Ministry of Education\'s College Innovation and Entrepreneurship Simulation Learning Platform.',
+      'Advanced through FITI and continued into entrepreneurship-oriented development programs.'
+    ]
+  },
+  {
+    title: 'AOCR Kaggle AI Challenge: Acute Appendicitis CT Segmentation',
+    org: 'AOCR Kaggle AI Challenge Project',
+    role: 'Research Team Leader',
+    period: '2023–2024',
+    tag: 'Challenge Champion',
+    links: [
+      { url: 'https://www.youtube.com/watch?v=mWsgQmneuAs', text: 'Watch Interview' },
+      { url: 'https://innoaward.taiwan-healthcare.org/award_detail.php?REFDOCTYPID=0r4ggllnka0x43sh&num=1&REFDOCID=0sq2hwchxfqj17e7', text: 'National Innovation Award' }
+    ],
+    desc:
+      'A 3D CT segmentation framework for acute appendicitis built for the AOCR Kaggle AI Challenge, emphasizing lesion-sensitive detection, localization, and clinically robust performance.',
+    bullets: [
+      'Led the research team across model design, optimization, and evaluation.',
+      'Won the championship in a challenge organized under AOCR, one of the three major international radiology conferences.',
+      'Generated downstream impact including awards, patent protection, and media visibility.'
+    ]
+  },
+  {
     title: 'Medication Delivery Robot Mentoring Project',
     org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
     role: 'AI Poster Mentor',
@@ -312,41 +347,6 @@ export const projectCards = [
       'Guided system architecture design for image-based medication recognition.',
       'Emphasized grounded responses, citation-aware output, and hallucination risk reduction.',
       'Strengthened the practical educational value of the project in healthcare settings.'
-    ]
-  },
-  {
-    title: 'NOVATERA: ICF Smart AI Rehabilitation System',
-    org: 'NOVATERA (ICF Smart AI Rehabilitation System)',
-    role: 'Chief Technology Officer (CTO)',
-    period: '2025–2026',
-    tag: 'Innovation / Entrepreneurship',
-    links: [
-      { url: 'https://ssp.moe.gov.tw/cases/1387', text: 'View Project' }
-    ],
-    desc:
-      'An AI-assisted rehabilitation platform designed for home and clinical environments, developed under CTO leadership with a focus on functional assessment, workflow design, and translational deployment.',
-    bullets: [
-      'Led technical strategy, system architecture, AI workflow design, and prototype development.',
-      'Selected as a Success Case on Taiwan Ministry of Education\'s College Innovation and Entrepreneurship Simulation Learning Platform.',
-      'Advanced through FITI and continued into entrepreneurship-oriented development programs.'
-    ]
-  },
-  {
-    title: 'AOCR Kaggle AI Challenge: Acute Appendicitis CT Segmentation',
-    org: 'AOCR Kaggle AI Challenge Project',
-    role: 'Research Team Leader',
-    period: '2023–2024',
-    tag: 'Challenge Champion',
-    links: [
-      { url: 'https://www.youtube.com/watch?v=mWsgQmneuAs', text: 'Watch Interview' },
-      { url: 'https://innoaward.taiwan-healthcare.org/award_detail.php?REFDOCTYPID=0r4ggllnka0x43sh&num=1&REFDOCID=0sq2hwchxfqj17e7', text: 'National Innovation Award' }
-    ],
-    desc:
-      'A 3D CT segmentation framework for acute appendicitis built for the AOCR Kaggle AI Challenge, emphasizing lesion-sensitive detection, localization, and clinically robust performance.',
-    bullets: [
-      'Led the research team across model design, optimization, and evaluation.',
-      'Won the championship in a challenge organized under AOCR, one of the three major international radiology conferences.',
-      'Generated downstream impact including awards, patent protection, and media visibility.'
     ]
   },
   {
