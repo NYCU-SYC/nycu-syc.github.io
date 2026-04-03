@@ -19,7 +19,7 @@ export const navItems = [
 ];
 
 export const researchInterests =
-  'Computer vision, medical image analysis, multimodal learning, generative modeling, large language models, and vision-language systems for trustworthy AI in brain tumor analysis and clinically grounded report generation.';
+  'Health Research: Bridging fundamental medical image analysis, multimodal vision-language systems, and rigorous clinical translational workflows to deploy trustworthy AI in oncology and radiology.';
 
 export const heroHighlights = [
   { value: 'AOCR & Awards', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
@@ -31,28 +31,28 @@ export const heroHighlights = [
 ];
 
 export const homeQuickFacts = [
-  'Direct-entry Ph.D. student at National Yang Ming Chiao Tung University, Institute of Biophotonics.',
-  'Research focus: brain tumor MRI analysis, lesion-sensitive segmentation, and clinically grounded report generation.',
-  'Authored 3 submitted journal papers, including a first-author manuscript to Medical Image Analysis (IF=11.8) currently under peer review, alongside 4 accepted conference papers (all selected for Oral Presentations).',
-  'Selected strengths include AOCR Challenge Championship and translational medical AI experience with patents and regulatory-facing products.'
+  'Current Focus: Advancing Medical AI by translating lesion-sensitive segmentation to clinical use, bridging the gap between algorithm development and real-world clinical deployment.',
+  'Technical Core: 3D MRI brain tumor segmentation, Non-contrast MRI analysis using knowledge distillation, and structurally constrained VLM-based report generation.',
+  'Academic Rigor: Submitted a first-author fundamental manuscript to Medical Image Analysis (IF=11.8) during the first year of a direct-entry Ph.D. program, alongside multiple accepted Oral Presentations.',
+  'Translational Scale: Led the development of end-to-end AI systems that have already successfully navigated Taiwan FDA (TFDA) regulatory pipelines and are actively deployed in top-tier medical centers.'
 ];
 
 export const homeFeatureCards = [
   {
-    title: 'Research Focus',
-    desc: 'Brain tumor MRI analysis, lesion-sensitive segmentation, multimodal learning, and vision-language systems for clinical report generation.'
+    title: 'Bench-to-Bedside Translation',
+    desc: 'Deeply committed to Health Research that scales. My systems do not stop at paper publication; they are built for regulatory clearance (TFDA/FDA) and active integration into live medical workflows.'
   },
   {
-    title: 'Academic Momentum',
-    desc: 'Direct-entry Ph.D. training at NYCU with a current GPA of 4.11 / 4.30, along with ongoing journal manuscripts and oral presentations.'
+    title: 'Methodological Rigor',
+    desc: 'Innovating at the foundation of Medical AI: developing DBI-MambaUNet for micro-lesion sensitivity and creating contrast-free inference frameworks using advanced knowledge distillation.'
   },
   {
-    title: 'Recognition',
-    desc: 'AOCR Kaggle AI Challenge Champion, National Innovation Award recipient, and winner of the AI Application Competition in Taiwan.'
+    title: 'Recognized Leadership',
+    desc: 'Demonstrated capacity to orchestrate health tech projects—ranging from serving as CTO of an AI rehab platform to winning the prestigious AOCR Kaggle AI Challenge.'
   },
   {
-    title: 'Translation',
-    desc: 'Experience spanning translational medical AI products, patents, clinical workflow integration, and innovation-oriented technical leadership.'
+    title: 'Multimodal Clinical Synthesis',
+    desc: 'Pioneering end-to-end integration that goes beyond imaging masks to generate clinically sound, hallucination-resistant structured radiology reports via constrained LLMs.'
   }
 ];
 
@@ -77,9 +77,7 @@ export const experience = [
     role: 'Ph.D. Researcher | Advisor: Prof. Yu-Te Wu',
     period: '2024–Present',
     bullets: [
-      'Developed an end-to-end clinical AI system for brain tumor stereotactic radiosurgery using an 11,000+ multicenter MRI dataset, including the DBI-MambaUNet architecture and SA-FTL loss for lesion-sensitive segmentation.',
-      'Improved sub-4 mm lesion detection sensitivity from 38.8% to 63.8%, and investigated GAN-based contrast-free analysis, knowledge distillation, and constrained vision-language workflows for structured report generation.',
-      'Standardized outputs into DICOM SEG/SR for PACS-compatible deployment; the initial system has obtained TFDA clearance and is under U.S. FDA review, while advanced iterations continue toward dual-certification.'
+      'Focus: Knowledge distillation, MambaUNet architectures, and fully automated brain tumor SRS clinical systems achieving TFDA clearance.'
     ]
   },
   {
@@ -87,17 +85,15 @@ export const experience = [
     role: 'Chief Technology Officer (CTO)',
     period: '2025–2026',
     bullets: [
-      'Led the technical strategy and product development of an AI-assisted rehabilitation platform for home and clinical environments, covering system architecture, AI workflow design, prototype development, and functional assessment.',
-      'The project was featured as a success case on Taiwan Ministry of Education’s College Innovation and Entrepreneurship Simulation Learning Platform, advanced to the semifinal round of the FITI (From IP to IPO) Program, and is currently participating in the U-start Plan for Innovation and Entrepreneurship.'
+      'Led technical strategy and translational deployment for an AI-assisted home rehabilitation platform, selected as an MOE Model Success Case.'
     ]
   },
   {
-    org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
+    org: 'StanCode (founded by a Stanford alumnus)',
     role: 'AI Poster Mentor',
     period: '2025–2026',
     bullets: [
-      'Mentored student teams developing healthcare-oriented AI systems, including a smart medication delivery robot and a medication recognition application based on image detection/classification, RAG, and LLMs.',
-      'Provided technical guidance on system architecture, computer vision modeling, evaluation design, and grounded medical question answering, with emphasis on hallucination mitigation and citation-based response mechanisms.'
+      'Mentored student teams in translating fundamental computer vision and LLM concepts into practical, healthcare-oriented AI systems.'
     ]
   },
   {
@@ -105,9 +101,7 @@ export const experience = [
     role: 'Research Team Leader',
     period: '2023–2024',
     bullets: [
-      'Led a research team in the AOCR Kaggle AI Challenge, organized under the Asian Oceanian Congress of Radiology (AOCR), one of the three major international radiology conferences.',
-      'Developed a 3D CT-based segmentation framework for acute appendicitis to improve lesion-sensitive detection, localization, and segmentation in complex clinical cases.',
-      'Oversaw the full development cycle from model design to performance evaluation, emphasizing robustness and translational value; the project won the championship and later received national awards, patent protection, and broad media coverage.'
+      'Developed an acute appendicitis 3D CT segmentation framework, securing the championship and the 21st National Innovation Award.'
     ]
   },
   {
@@ -115,9 +109,7 @@ export const experience = [
     role: 'Research / Development Project | Team Leader',
     period: '2023–2024',
     bullets: [
-      'Led the development of an interactive generative imaging system for the National Museum of Natural Science.',
-      'Implemented ControlNet for controllable image generation and LoRA for exhibit-specific fine-tuning, and integrated diffusion-based generation with face-swapping techniques to improve realism and user interaction.',
-      'The project received the Excellence Award in the AI Application Challenge hosted by Taiwan’s Ministry of Digital Affairs.'
+      'Implemented exhibit-specific generative imaging systems via ControlNet and LoRA, winning the national AI Application Challenge.'
     ]
   },
   {
@@ -125,8 +117,7 @@ export const experience = [
     role: 'Research Project Intern / Member',
     period: '2022–2023',
     bullets: [
-      'Worked on cGAN-based target image synthesis, data expansion, and RGB-to-infrared cross-modal translation for drone vision and edge deployment scenarios.',
-      'Built synthetic image generation workflows to address data scarcity and support downstream object detection and segmentation in restricted hardware environments.'
+      'Built cGAN-based synthetic image generation workflows to resolve data scarcity constraints in edge deployment environments.'
     ]
   }
 ];

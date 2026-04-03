@@ -46,9 +46,13 @@ import { education, experience, honors, innovation, patents, skills, siteMeta } 
               </div>
               <span class="pill">{item.period}</span>
             </div>
-            <ul class="bullet-list">
-              {item.bullets.map((bullet) => <li>{bullet}</li>)}
-            </ul>
+            {item.bullets.length === 1 ? (
+              <p class="subtle-text" style="margin-top: 0.8rem; line-height: 1.6;">{item.bullets[0]}</p>
+            ) : (
+              <ul class="bullet-list">
+                {item.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            )}
           </article>
         ))}
       </div>
