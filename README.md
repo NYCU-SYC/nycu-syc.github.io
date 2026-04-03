@@ -1,30 +1,24 @@
-# Yi-Chen Sun Astro CV Website
+# Yi-Chen Sun Academic Website
 
-This project is an Astro-based academic website and CV portfolio generated from the current Word CV content.
+This package is a static GitHub Pages–ready academic website.
 
 ## Files
+- `index.html` — home page
+- `publications.html` — selected publications and presentations
+- `projects.html` — selected projects
+- `cv.html` — web CV
+- `contact.html` — contact page
+- `styles.css` — shared stylesheet
+- `Yi-Chen_Sun_CV.pdf` — downloadable CV PDF
 
-- `src/pages/` — Astro pages for Home, Publications, Projects, CV, and Contact
-- `src/layouts/` — reusable page layout
-- `src/components/` — shared UI components
-- `src/data/site.ts` — site content and structured data
-- `src/styles/global.css` — global site styling
-- `public/` — static assets copied directly to the final build, including the CV PDF
+## Deploy to GitHub Pages
+1. Create a GitHub repository.
+2. Upload all files in this folder to the repository root.
+3. In GitHub, open **Settings → Pages**.
+4. Set the source to deploy from the **main branch** and the **root** folder.
+5. Save. GitHub Pages will publish the site.
 
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## GitHub Pages
-
-This project is configured as a static Astro site and can be deployed to GitHub Pages after build output is published according to your preferred workflow.
+## Recommended next edits
+- Add a real profile photo by replacing the `avatar` block in `index.html`.
+- Add Google Scholar / GitHub / LinkedIn links if desired.
+- Add DOI / arXiv / conference links in `publications.html`.
