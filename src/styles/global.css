@@ -1,18 +1,20 @@
 :root {
-  --bg: #f4f7fc;
-  --panel: rgba(255, 255, 255, 0.92);
+  --bg: #fafcff;
+  --panel: rgba(255, 255, 255, 0.85);
   --panel-strong: #ffffff;
-  --text: #0f172a;
-  --muted: #5f6b85;
-  --line: rgba(15, 23, 42, 0.09);
-  --brand: #173b8a;
-  --brand-2: #0f1f5a;
-  --brand-soft: #eaf1ff;
-  --accent: #6c8cff;
-  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-  --radius-xl: 28px;
+  --text: #050a15;
+  --muted: #475467;
+  --line: rgba(5, 10, 21, 0.08);
+  --brand: #0f172a;
+  --brand-2: #1e293b;
+  --brand-soft: #f1f5f9;
+  --accent: #0066ff;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 12px 24px -4px rgba(15, 23, 42, 0.03);
+  --shadow-hover: 0 10px 15px -3px rgba(15, 23, 42, 0.06), 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+  --radius-xl: 32px;
   --radius-lg: 20px;
-  --radius-md: 14px;
+  --radius-md: 12px;
   --container: 1180px;
 }
 
@@ -20,17 +22,19 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(108, 140, 255, 0.15), transparent 32%),
-    radial-gradient(circle at top right, rgba(23, 59, 138, 0.12), transparent 28%),
-    linear-gradient(180deg, #f8fbff 0%, #f3f6fb 55%, #eef2f8 100%);
+    radial-gradient(circle at 15% 0%, rgba(0, 102, 255, 0.04), transparent 30%),
+    radial-gradient(circle at 85% 100%, rgba(0, 102, 255, 0.04), transparent 30%),
+    var(--bg);
 }
 
 a { color: inherit; text-decoration: none; }
 p { margin: 0; line-height: 1.8; }
-h1,h2,h3 { margin: 0; line-height: 1.2; }
+h1,h2,h3 { margin: 0; line-height: 1.15; letter-spacing: -0.04em; font-weight: 700; }
 img { max-width: 100%; display: block; }
 
 .container {
@@ -84,7 +88,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-section,
-.page-hero { padding: 3rem 0 1.5rem; }
+.page-hero { padding: 4.5rem 0 2.5rem; }
 .hero-grid {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
@@ -102,9 +106,16 @@ img { max-width: 100%; display: block; }
 .glass-card,
 .timeline-card {
   background: var(--panel);
-  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.05);
   box-shadow: var(--shadow);
   border-radius: var(--radius-xl);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-card:hover, .profile-panel:hover, .feature-card:hover, .info-card:hover, .project-card:hover, .publication-card:hover, .metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(15, 23, 42, 0.1);
 }
 .hero-card,
 .profile-panel,
@@ -131,8 +142,8 @@ img { max-width: 100%; display: block; }
   font-size: 1.7rem;
   font-weight: 800;
   color: white;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
-  box-shadow: 0 16px 35px rgba(23, 59, 138, 0.18);
+  background: linear-gradient(135deg, #0066ff, #00d2ff);
+  box-shadow: 0 16px 35px rgba(0, 102, 255, 0.25);
   margin-bottom: 1.1rem;
 }
 .profile-role,
@@ -175,6 +186,8 @@ img { max-width: 100%; display: block; }
 .hero-intro h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   letter-spacing: -0.05em;
+  font-weight: 800;
+  color: var(--brand);
   max-width: 17ch;
   margin: 0.4rem 0 1rem;
 }
@@ -200,11 +213,11 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 132px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,248,253,0.98));
+  min-height: 140px;
+  background: white;
 }
-.metric-value { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.6rem; }
-.metric-label { font-size: 0.92rem; text-align: justify; text-justify: inter-word; line-height: 1.65; }
+.metric-value { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 0.8rem; color: var(--brand); }
+.metric-label { font-size: 0.95rem; text-align: justify; text-justify: inter-word; line-height: 1.6; color: var(--muted); }
 
 .section { padding: 1.3rem 0 3.5rem; }
 .alt-bg { background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(227,234,246,0.28)); }
@@ -284,14 +297,14 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   width: fit-content;
   max-width: 100%;
-  padding: 0.72rem 1rem;
+  padding: 0.72rem 1.1rem;
   border-radius: 18px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  background: var(--brand);
   color: white;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 700;
   line-height: 1.5;
-  box-shadow: 0 14px 30px rgba(23, 59, 138, 0.16);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
 }
 .project-role-row {
   display: flex;
@@ -337,13 +350,17 @@ img { max-width: 100%; display: block; }
 .button:hover { transform: translateY(-1px); }
 .button.primary {
   color: white;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  box-shadow: 0 14px 34px rgba(23, 59, 138, 0.22);
+  background: var(--brand);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
 }
 .button.secondary {
-  color: var(--brand-2);
+  color: var(--brand);
   background: white;
-  border: 1px solid rgba(15,23,42,0.1);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+.button.secondary:hover {
+  background: var(--brand-soft);
 }
 .cv-download { align-self: flex-start; }
 
