@@ -11,7 +11,7 @@ import { siteMeta } from '../data/site';
   </section>
 
   <section class="section">
-    <div class="container two-column-layout">
+    <div class="container narrow">
       <article class="contact-card emphasis">
         <h3>Primary Contact</h3>
         <dl class="contact-grid large">
@@ -23,15 +23,6 @@ import { siteMeta } from '../data/site';
           <a class="button primary" href={`mailto:${siteMeta.email}`}>Email Me</a>
           <a class="button secondary" href={siteMeta.cvPdf}>Download CV</a>
         </div>
-      </article>
-
-      <article class="contact-card">
-        <h3>Website Notes</h3>
-        <ul class="bullet-list compact">
-          <li>This Astro version is structured as a reusable static site for GitHub Pages deployment.</li>
-          <li>Update contact links, Google Scholar, GitHub, LinkedIn, and profile photo as needed.</li>
-          <li>The downloadable CV PDF is served from the public directory for direct linking.</li>
-        </ul>
       </article>
     </div>
   </section>
