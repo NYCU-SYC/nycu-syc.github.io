@@ -81,6 +81,23 @@ import {
   </section>
 
   <section class="section">
+    <div class="container feature-grid three-cols">
+      <div>
+        <SectionHeading eyebrow="Honors" title="Selected Awards" />
+        <article class="info-card"><ul class="bullet-list compact">{honors.map((item) => <li set:html={item} />)}</ul></article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="Translation" title="Innovation" />
+        <article class="info-card"><ul class="bullet-list compact">{innovation.map((item) => <li set:html={item} />)}</ul></article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="IP" title="Patents" />
+        <article class="info-card"><ul class="bullet-list compact">{patents.map((item) => <li set:html={item} />)}</ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
     <div class="container two-column-layout">
       <div>
         <SectionHeading eyebrow="Research Interests" title="Current Focus" />
@@ -103,23 +120,6 @@ import {
             </article>
           ))}
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt-bg">
-    <div class="container feature-grid three-cols">
-      <div>
-        <SectionHeading eyebrow="Honors" title="Selected Awards" />
-        <article class="info-card"><ul class="bullet-list compact">{honors.map((item) => <li set:html={item} />)}</ul></article>
-      </div>
-      <div>
-        <SectionHeading eyebrow="Translation" title="Innovation" />
-        <article class="info-card"><ul class="bullet-list compact">{innovation.map((item) => <li set:html={item} />)}</ul></article>
-      </div>
-      <div>
-        <SectionHeading eyebrow="IP" title="Patents" />
-        <article class="info-card"><ul class="bullet-list compact">{patents.map((item) => <li set:html={item} />)}</ul></article>
       </div>
     </div>
   </section>

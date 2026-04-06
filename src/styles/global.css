@@ -5,13 +5,13 @@
   --text: #050a15;
   --muted: #475467;
   --line: rgba(14, 42, 128, 0.08);
-  --brand: #143b96; /* Deep elegant blue */
-  --brand-2: #091e5c; /* Darker prestige blue */
-  --brand-soft: #eaf1ff;
-  --accent: #2e5bc2;
-  --shadow-sm: 0 1px 2px rgba(14, 42, 128, 0.04);
-  --shadow: 0 4px 6px -1px rgba(14, 42, 128, 0.05), 0 12px 24px -4px rgba(14, 42, 128, 0.03);
-  --shadow-hover: 0 10px 15px -3px rgba(14, 42, 128, 0.08), 0 25px 50px -12px rgba(14, 42, 128, 0.12);
+  --brand: #1a4ece; /* Vibrant modern blue */
+  --brand-2: #143b96; /* Elegant deep blue */
+  --brand-soft: #f0f5ff;
+  --accent: #2563eb;
+  --shadow-sm: 0 1px 2px rgba(26, 78, 206, 0.04);
+  --shadow: 0 4px 6px -1px rgba(26, 78, 206, 0.05), 0 12px 24px -4px rgba(26, 78, 206, 0.03);
+  --shadow-hover: 0 10px 15px -3px rgba(26, 78, 206, 0.08), 0 25px 50px -12px rgba(26, 78, 206, 0.12);
   --radius-xl: 32px;
   --radius-lg: 20px;
   --radius-md: 12px;

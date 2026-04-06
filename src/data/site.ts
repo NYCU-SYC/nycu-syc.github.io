@@ -182,10 +182,10 @@ export const conferencePresentations = [
 export const honors = [
   '<strong>Champion, AOCR Kaggle AI Challenge</strong>, held under the Asian Oceanian Congress of Radiology (AOCR), one of the three major international radiology conferences.',
   '<strong>21st National Innovation Award</strong> (Academic Innovation Award), Taiwan.',
-  '<strong>Winner, AI Application Competition</strong>, Digital Industry Administration, Taiwan.',
   '<strong>Served as startup CTO</strong>, participating in the FITI program and selected as a <strong>Model Success Case by MOE Taiwan</strong>.',
-  '<strong>Served as an AI Poster Mentor at StanCode</strong>, leading student teams in hands-on AI project deployments.',
-  'Shortlisted for the <strong>Smart Innovation Award</strong>.'
+  '<strong>Winner, AI Application Competition</strong>, Digital Industry Administration, Taiwan.',
+  'Shortlisted for the <strong>Smart Innovation Award</strong>.',
+  '<strong>Served as an AI Poster Mentor at StanCode</strong>, leading student teams in hands-on AI project deployments.'
 ];
 
 export const innovation = [
