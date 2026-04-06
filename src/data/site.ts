@@ -22,7 +22,7 @@ export const researchInterests =
   'Health Research: Bridging fundamental medical image analysis, multimodal vision-language systems, and rigorous clinical translational workflows to deploy trustworthy AI in oncology and radiology.';
 
 export const heroHighlights = [
-  { value: 'AOCR & Awards', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
+  { value: 'AOCR Kaggle Champion', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
   { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
   { value: 'AI Poster Mentor', label: 'Served as an AI Poster Mentor at StanCode, leading student teams in hands-on AI project deployments.' },
   { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
@@ -127,7 +127,7 @@ export const journalManuscripts = [
     venue: 'Medical Image Analysis',
     impact: '11.8',
     authorship: '1st author',
-    status: 'Under review',
+    status: 'Under Peer Review',
     title:
       'DBI-MambaUNet with Size-Aware Focal Tversky Loss: A Holistic Framework for Multi-Subtype Brain Tumor Micro-Lesion Segmentation in Stereotactic Radiosurgery.'
   },
@@ -135,7 +135,7 @@ export const journalManuscripts = [
     venue: 'Journal of Medical Systems',
     impact: '5.7',
     authorship: '3rd author',
-    status: 'Under review',
+    status: 'Under Peer Review',
     title:
       'A Standards-Based, PACS-Native AI Integration Architecture for Background Inference in Radiology Reporting Workflows.'
   },
@@ -143,7 +143,7 @@ export const journalManuscripts = [
     venue: 'Computer Methods and Programs in Biomedicine',
     impact: '4.8',
     authorship: 'Co-author',
-    status: 'Under review',
+    status: 'Under Peer Review',
     title:
       'Fully Automated AI-Based Aortic Quantification System for Opportunistic Aneurysm Detection on Routine CT.'
   }
@@ -184,7 +184,8 @@ export const honors = [
   '<strong>21st National Innovation Award</strong> (Academic Innovation Award), Taiwan.',
   '<strong>Winner, AI Application Competition</strong>, Digital Industry Administration, Taiwan.',
   '<strong>Served as startup CTO</strong>, participating in the FITI program and selected as a <strong>Model Success Case by MOE Taiwan</strong>.',
-  '<strong>Served as an AI Poster Mentor at StanCode</strong>, leading student teams in hands-on AI project deployments.'
+  '<strong>Served as an AI Poster Mentor at StanCode</strong>, leading student teams in hands-on AI project deployments.',
+  'Shortlisted for the <strong>Smart Innovation Award</strong>.'
 ];
 
 export const innovation = [

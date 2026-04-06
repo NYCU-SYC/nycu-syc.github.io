@@ -7,6 +7,8 @@ import {
   heroHighlights,
   education,
   honors,
+  innovation,
+  patents,
   projectCards,
   homeQuickFacts,
   homeFeatureCards
@@ -59,8 +61,10 @@ import {
             Rather than stopping at theoretical performance, I build end-to-end systems. My research spans contrast-free brain tumor MRI analysis via knowledge distillation, the development of 3D medical vision-language models (VLM) for automated clinical report generation, hallucination-resistant structured reporting natively integrated with clinical PACS, and leading teams to scale TFDA/FDA-facing oncology systems.
           </p>
           <div class="button-row">
-            <a class="button primary" href="/projects">View Clinical Systems & Research</a>
-            <a class="button secondary" href="/cv">View Academic CV</a>
+            <a class="button primary" href="/publications">Publications</a>
+            <a class="button secondary" href="/projects">Projects</a>
+            <a class="button secondary" href="/cv">CV</a>
+            <a class="button secondary" href="/contact">Contact</a>
           </div>
         </article>
 
@@ -104,31 +108,18 @@ import {
   </section>
 
   <section class="section alt-bg">
-    <div class="container two-column-layout">
+    <div class="container feature-grid three-cols">
       <div>
-        <SectionHeading eyebrow="Education" title="Academic Training" />
-        <div class="stack-cards">
-          {education.map((item) => (
-            <article class="info-card">
-              <div class="row-between gap align-start">
-                <div>
-                  <h3>{item.school}</h3>
-                  <p class="muted-copy">{item.degree}</p>
-                </div>
-                <span class="pill">{item.period}</span>
-              </div>
-              {item.detail && <p class="subtle-text">{item.detail}</p>}
-            </article>
-          ))}
-        </div>
+        <SectionHeading eyebrow="Honors" title="Selected Awards" />
+        <article class="info-card"><ul class="bullet-list compact">{honors.map((item) => <li set:html={item} />)}</ul></article>
       </div>
       <div>
-        <SectionHeading eyebrow="Selected Honors" title="Highlights" />
-        <div class="info-card">
-          <ul class="bullet-list compact">
-            {honors.map((item) => <li set:html={item} />)}
-          </ul>
-        </div>
+        <SectionHeading eyebrow="Translation" title="Innovation" />
+        <article class="info-card"><ul class="bullet-list compact">{innovation.map((item) => <li set:html={item} />)}</ul></article>
+      </div>
+      <div>
+        <SectionHeading eyebrow="IP" title="Patents" />
+        <article class="info-card"><ul class="bullet-list compact">{patents.map((item) => <li set:html={item} />)}</ul></article>
       </div>
     </div>
   </section>
