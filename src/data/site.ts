@@ -30,7 +30,9 @@ export const heroHighlights = [
   { value: '7 Publications', label: 'Authored 3 journal papers (with 1st-author at MedIA IF=11.8 under review) and 4 accepted conference papers (all Oral Presentations).' }
 ];
 
+
 export const homeQuickFacts = [
+  researchInterests,
   'Current Focus: Advancing Medical AI by translating lesion-sensitive segmentation to clinical use, bridging the gap between algorithm development and real-world clinical deployment.',
   'Technical Core: 3D MRI brain tumor segmentation, Non-contrast MRI analysis using knowledge distillation, and structurally constrained VLM-based report generation.',
   'Academic Rigor: Submitted a first-author fundamental manuscript to Medical Image Analysis (IF=11.8) during the first year of a direct-entry Ph.D. program, alongside multiple accepted Oral Presentations.',
