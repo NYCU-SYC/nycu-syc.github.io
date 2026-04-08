@@ -24,7 +24,7 @@ export const researchInterests =
 export const heroHighlights = [
   { value: 'AOCR Kaggle Champion', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
   { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
-  { value: 'Patents & IP', label: 'Hold 1 granted Taiwan utility patent and 3 pending invention patents (Taiwan & U.S.) for end-to-end medical AI systems.' },
+  { value: 'StanCode Instructor', label: 'Served as an Instructor at the StanCode Programming Education Institute and acted as an AI Poster Mentor, leading student teams in hands-on AI project deployments.' },
   { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
   { value: 'GPA: 4.11 / 4.30', label: 'Achieved a near-perfect GPA in NYCU\'s highly competitive Direct-Entry Ph.D. program, balancing rigorous coursework with pioneering medical AI research.' },
   { value: '7 Publications', label: 'Authored 3 journal papers (with 1st-author at MedIA IF=11.8 under review) and 4 accepted conference papers (all Oral Presentations).' }
