@@ -134,17 +134,19 @@ img { max-width: 100%; display: block; }
   align-self: start;
 }
 .profile-avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 1.7rem;
-  font-weight: 800;
-  color: white;
-  background: linear-gradient(135deg, #0066ff, #00d2ff);
-  box-shadow: 0 16px 35px rgba(0, 102, 255, 0.25);
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: auto; /* Allow image to define height */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   margin-bottom: 1.1rem;
+  box-shadow: 0 10px 25px rgba(26, 78, 206, 0.15);
+}
+.profile-avatar img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .profile-role,
 .muted-copy,
