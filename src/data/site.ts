@@ -24,7 +24,7 @@ export const researchInterests =
 export const heroHighlights = [
   { value: 'AOCR Kaggle Champion', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
   { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
-  { value: 'AI Poster Mentor', label: 'Served as an AI Poster Mentor at StanCode, leading student teams in hands-on AI project deployments.' },
+  { value: 'Patents & IP', label: 'Hold 1 granted Taiwan utility patent and 3 pending invention patents (Taiwan & U.S.) for end-to-end medical AI systems.' },
   { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
   { value: 'GPA: 4.11 / 4.30', label: 'Achieved a near-perfect GPA in NYCU\'s highly competitive Direct-Entry Ph.D. program, balancing rigorous coursework with pioneering medical AI research.' },
   { value: '7 Publications', label: 'Authored 3 journal papers (with 1st-author at MedIA IF=11.8 under review) and 4 accepted conference papers (all Oral Presentations).' }
@@ -91,12 +91,14 @@ export const experience = [
     ]
   },
   {
-    org: 'StanCode (founded by a Stanford alumnus)',
-    role: 'AI Poster Mentor',
+    org: 'StanCode Programming Education Institute',
+    role: 'Instructor & AI Poster Mentor',
     period: '2025–2026',
     bullets: [
-      'Mentored student teams in translating fundamental computer vision and LLM concepts into practical, healthcare-oriented AI systems.'
-    ]
+      'Mentored student teams in translating fundamental computer vision and LLM concepts into practical, healthcare-oriented AI systems as an official instructor.'
+    ],
+    link: 'https://stancodetw.easy.co/',
+    linkLabel: 'Visit StanCode Website'
   },
   {
     org: 'AOCR Kaggle AI Challenge Project',
@@ -187,7 +189,7 @@ export const honors = [
   '<strong>Served as startup CTO</strong>, participating in the FITI program and selected as a <strong>Model Success Case by MOE Taiwan</strong>.',
   '<strong>Winner, AI Application Competition</strong>, Digital Industry Administration, Taiwan.',
   'Shortlisted for the <strong>Smart Innovation Award</strong>.',
-  '<strong>Served as an AI Poster Mentor at StanCode</strong>, leading student teams in hands-on AI project deployments.'
+  'Served as an <strong>Instructor and AI Poster Mentor</strong> at the StanCode Programming Education Institute, leading student teams in hands-on AI project deployments.'
 ];
 
 export const innovation = [
