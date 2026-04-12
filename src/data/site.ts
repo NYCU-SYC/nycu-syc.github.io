@@ -25,7 +25,7 @@ export const heroHighlights = [
   { value: 'AOCR Kaggle Champion', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
   { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
   { value: 'StanCode Instructor', label: 'Served as an Instructor at the StanCode Programming Education Institute and acted as an AI Poster Mentor, leading student teams in hands-on AI project deployments.' },
-  { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, securing TFDA approval with U.S. FDA clearance under review.' },
+  { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, achieving both TFDA and U.S. FDA clearance for AItewan DeepBT Detector–Plus.' },
   { value: 'GPA: 4.11 / 4.30', label: 'Achieved a near-perfect GPA in NYCU\'s highly competitive Direct-Entry Ph.D. program, balancing rigorous coursework with pioneering medical AI research.' },
   { value: '7 Publications', label: 'Authored 3 journal papers (with 1st-author at MedIA IF=11.8 under review) and 4 accepted conference papers (all Oral Presentations).' }
 ];
@@ -36,7 +36,7 @@ export const homeQuickFacts = [
   'Current Focus: Advancing Medical AI by translating lesion-sensitive segmentation to clinical use, bridging the gap between algorithm development and real-world clinical deployment.',
   'Technical Core: 3D MRI brain tumor segmentation, Non-contrast MRI analysis using knowledge distillation, and structurally constrained VLM-based report generation.',
   'Academic Rigor: Submitted a first-author fundamental manuscript to Medical Image Analysis (IF=11.8) during the first year of a direct-entry Ph.D. program, alongside multiple accepted Oral Presentations.',
-  'Translational Scale: Led the development of end-to-end AI systems that have already successfully navigated Taiwan FDA (TFDA) regulatory pipelines and are actively deployed in top-tier medical centers.'
+  'Translational Scale: Led the development of end-to-end AI systems that have already successfully navigated Taiwan FDA (TFDA) and U.S. FDA regulatory pipelines, currently deployed in top-tier medical centers.'
 ];
 
 export const homeFeatureCards = [
@@ -79,7 +79,7 @@ export const experience = [
     role: 'Ph.D. Researcher | Advisor: Prof. Yu-Te Wu',
     period: '2024–Present',
     bullets: [
-      'Focus: Knowledge distillation, MambaUNet architectures, and fully automated brain tumor SRS clinical systems achieving TFDA clearance.'
+      'Focus: Knowledge distillation, MambaUNet architectures, and fully automated brain tumor SRS clinical systems achieving TFDA and U.S. FDA clearance.'
     ]
   },
   {
@@ -193,7 +193,7 @@ export const honors = [
 ];
 
 export const innovation = [
-  'Co-developed AItewan DeepBT Detector–Plus, with TFDA medical device approval obtained and U.S. FDA application pending.',
+  'Co-developed AItewan DeepBT Detector–Plus, with both TFDA and U.S. FDA medical device approvals obtained.',
   'Independently developed AItewan DeepBT Detector–A Plus, with TFDA and U.S. FDA medical device applications pending.'
 ];
 
@@ -253,7 +253,7 @@ export const projectCards = [
     period: 'Ongoing',
     tag: 'Medical AI Product',
     desc:
-      'A clinically oriented brain tumor AI product successfully transitioning from research to clinical validation. It has obtained Taiwan FDA (TFDA) approval and is currently in the active application process for U.S. FDA clearance. It is now officially deployed and in actual clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
+      'A clinically oriented brain tumor AI product successfully transitioning from research to clinical validation. It has achieved both Taiwan FDA (TFDA) and U.S. FDA (510(k)) clearance. It is now officially deployed and in actual clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
     bullets: [
       'Successfully advanced the system through rigorous TFDA certification pipelines.',
       'Led the product integration and deployment across multiple top-tier medical centers in Taiwan.',
