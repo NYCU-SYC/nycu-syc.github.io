@@ -369,7 +369,7 @@ export const skills = {
   ],
   evaluation:
     'Model evaluation with lesion-wise sensitivity, FP/scan, FROC/CPM, precision and F1, plus regulatory documentation for FDA 510(k).',
-  languages: 'Mandarin Chinese (native), English (intermediate)'
+  languages: 'Mandarin Chinese (native), English (upper-intermediate)'
 };
 
 // Media & interviews (rendered on /media)
