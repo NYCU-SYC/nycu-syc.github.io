@@ -1,139 +1,280 @@
+// ---------------------------------------------------------------------------
+// Evidence links (shared by pages)
+// ---------------------------------------------------------------------------
+export const links = {
+  linkedin: 'https://www.linkedin.com/in/yi-chen-sun-1159872a6/',
+  fdaRecord: 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm?ID=K252190',
+  nycuFda: 'https://en.cbmse.nycu.edu.tw/post_260415/',
+  futexVideo: 'https://www.youtube.com/watch?v=dgG-oD6Yom4',
+  futexCna: 'https://www.cna.com.tw/postwrite/eng/447082',
+  futexBusinessToday: 'https://www.businesstoday.com.tw/article/category/183015/post/202609160010/',
+  futexCtee: 'https://www.ctee.com.tw/news/20260915701774-430104',
+  futexTechNews: 'https://technews.tw/2026/09/10/advanced-semiconductor-processes',
+  ustartResults: 'https://ustart.yda.gov.tw/news/1818',
+  ustartYahoo: 'https://tw.news.yahoo.com/%E6%95%99%E8%82%B2%E9%83%A8u-start-8%E7%B5%84%E6%96%B0%E5%89%B5%E5%9C%98%E9%9A%8A%E5%8B%87%E5%A5%AA%E7%99%BE%E8%90%AC%E7%8D%8E%E9%87%91-12-1%E9%A0%92%E7%8D%8E-081741858.html',
+  ustartLtn: 'https://news.ltn.com.tw/news/life/breakingnews/5650348',
+  ustartUdn: 'https://money.udn.com/money/story/7307/9898449',
+  zgcNotice: 'https://ustart.yda.gov.tw/p/405-1000-2223,c93.php?Lang=zh-tw',
+  zgcYam: 'https://n.yam.com/Article/20260618131207',
+  moeCase: 'https://ssp.moe.gov.tw/cases/1387',
+  aocrVideo: 'https://www.youtube.com/watch?v=mWsgQmneuAs',
+  aocr1111: 'https://www.1111.com.tw/news/jobns/155237',
+  aocrYahoo: 'https://tw.news.yahoo.com/%E6%94%BE%E5%B0%84%E7%B7%9A%E9%86%AB%E5%AD%B8%E6%9C%83%E8%88%89%E8%BE%A6ai%E7%AB%B6%E8%B3%BD-%E5%85%83%E6%99%BA%E5%A4%A7%E5%AD%B8%E5%8F%8A%E4%BA%9E%E6%9D%B1%E9%86%AB%E9%99%A2%E7%A0%94%E7%A9%B6%E5%9C%98%E9%9A%8A%E6%A6%AE%E7%8D%B2%E7%AC%AC-013000326.html',
+  aocrUdn: 'https://udn.com/news/story/6928/7809969',
+  aocrYamInterview: 'https://n.yam.com/Article/20240408977486',
+  aocrLineInterview: 'https://today.line.me/tw/v3/article/60RNV5j',
+  nia21Award: 'https://innoaward.taiwan-healthcare.org/award_detail.php?REFDOCTYPID=0r4ggllnka0x43sh&num=1&REFDOCID=0sq2hwchxfqj17e7',
+  nia21Line: 'https://today.line.me/tw/v3/article/gzv8kQ8',
+  nia21_1111: 'https://www.1111.com.tw/news/jobns/159045',
+  nia21Ctee: 'https://www.ctee.com.tw/news/20241231701786-431204',
+  stancode: 'https://stancodetw.easy.co/',
+  biomedicines: 'https://www.mdpi.com/2227-9059/14/7/1595',
+  ieeeAmlds1: 'https://ieeexplore.ieee.org/abstract/document/11159345',
+  ieeeAmlds2: 'https://ieeexplore.ieee.org/abstract/document/11159362',
+  fom: 'https://www.focusonmicroscopy.org/2025-program-online/?source=pp&event_id=8024&tab=pdf&a_id=8736'
+};
+
+// Age is computed at build time so it never goes stale between deploys.
+const birth = new Date(2002, 7, 30);
+const today = new Date();
+const age =
+  today.getFullYear() - birth.getFullYear() -
+  (today < new Date(today.getFullYear(), birth.getMonth(), birth.getDate()) ? 1 : 0);
+
 export const siteMeta = {
   title: 'Yi-Chen Sun',
-  subtitle: 'Academic Website',
+  subtitle: 'Medical AI · Research to Market',
   description:
-    'Academic website for Yi-Chen Sun featuring research in computer vision, medical image analysis, multimodal AI, and brain tumor clinical report generation.',
+    'Yi-Chen Sun works on medical AI in five concurrent roles: NYCU direct-entry Ph.D. researcher, Senior AI Engineer & PM at AItewan (FDA-cleared brain-tumor SaMD), CTO of NOVATERA, Technical/Medical Fellow at SparkLabs Taiwan, and StanCode instructor.',
   email: 's.chenney0830@gmail.com',
   phone: '+886 981116830',
   location: 'New Taipei City, Taiwan',
-  birthdate: 'August 30, 2002 (Age 23)',
-  cvPdf: '/Yi-Chen_Sun_MIT_Stanford_CS_AI_CV.pdf'
+  birthdate: `August 30, 2002 (Age ${age})`,
+  cvPdf: '/Yi-Chen_Sun_Resume.pdf'
 };
 
 export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/publications', label: 'Publications' },
   { href: '/projects', label: 'Projects' },
+  { href: '/media', label: 'Media' },
   { href: '/cv', label: 'CV' },
   { href: '/contact', label: 'Contact' }
 ];
 
-export const researchInterests =
-  'Health Research: Bridging fundamental medical image analysis, multimodal vision-language systems, and rigorous clinical translational workflows to deploy trustworthy AI in oncology and radiology.';
-
-export const heroHighlights = [
-  { value: 'AOCR Kaggle Champion', label: 'AOCR (Top-3 Radiology Conference) Kaggle AI Champion, National Innovation Award Recipient, and featured in an exclusive interview.' },
-  { value: 'CTO & Startup', label: 'Served as startup CTO, participating in the FITI program and selected as a Model Success Case by MOE Taiwan.' },
-  { value: 'StanCode Instructor', label: 'Served as an Instructor at the StanCode Programming Education Institute and acted as an AI Poster Mentor, leading student teams in hands-on AI project deployments.' },
-  { value: 'TFDA & U.S. FDA', label: 'Contributed to Brain Tumor SaMD operations, achieving both TFDA and U.S. FDA clearance for AItewan DeepBT Detector–Plus.' },
-  { value: 'GPA: 4.11 / 4.30', label: 'Achieved a near-perfect GPA in NYCU\'s highly competitive Direct-Entry Ph.D. program, balancing rigorous coursework with pioneering medical AI research.' },
-  { value: '7 Publications', label: 'Authored 3 journal papers (with 1st-author at MedIA IF=11.8 under review) and 4 accepted conference papers (all Oral Presentations).' }
+// ---------------------------------------------------------------------------
+// Five concurrent roles (rendered as a timeline whose bars all reach "Now")
+// ---------------------------------------------------------------------------
+export const concurrentRoles = [
+  {
+    org: 'NYCU',
+    note: 'until 2027',
+    role: 'Direct-Entry Ph.D. Researcher',
+    start: 2024,
+    focus: 'Leads LDCT/SDCT CAC, lung nodule, MRI brain tumor and CCM projects',
+    color: '#1d6fb8'
+  },
+  {
+    org: 'AItewan',
+    role: 'Senior AI Engineer & Product Manager',
+    start: 2024,
+    focus: 'MRI brain-tumor SaMD · U.S. FDA 510(k) + TFDA cleared',
+    color: '#0e7c86'
+  },
+  {
+    org: 'NOVATERA',
+    role: 'Chief Technology Officer',
+    start: 2025,
+    focus: 'Vision-language models for long-term-care rehabilitation · 7 paying sites',
+    color: '#c0392b'
+  },
+  {
+    org: 'StanCode',
+    role: 'Instructor & AI Mentor',
+    start: 2025,
+    focus: 'Teaching Team · healthcare-AI student projects',
+    color: '#2f855a',
+    link: links.stancode
+  },
+  {
+    org: 'SparkLabs Taiwan',
+    role: 'Technical/Medical Fellow (VC)',
+    start: 2026,
+    focus: 'Deep-tech scouting & moat assessment',
+    color: '#6b4fbb'
+  }
 ];
 
+export const researchInterests =
+  'Research interests: medical image analysis, lesion-sensitive detection and segmentation, contrast-free MRI via knowledge distillation, and vision-language models for clinical reporting and rehabilitation.';
+
+// Track record (home page metric cards)
+export const heroHighlights = [
+  {
+    value: 'U.S. FDA 510(k) + TFDA',
+    label: 'DeepBT Detector-Plus (K252190), co-developed as AI & system lead; in clinical use at Taipei VGH, Taichung VGH and Shin Kong Hospital.'
+  },
+  {
+    value: '2× National Innovation Award',
+    label: 'Academic Innovation Award at the 21st (2024) and 23rd (2026) editions, for appendicitis CT AI and a medical-AI workflow platform I led.'
+  },
+  {
+    value: '2026 FutureTech Award',
+    label: 'NSTC award for DeepBT A+, the brain-tumor MRI reading assistant I led: 2,500+ clinical cases, report turnaround −58%.'
+  },
+  {
+    value: 'NT$1M Startup Award',
+    label: 'U-start Merit Team (Ministry of Education) as CTO of NOVATERA; also Zhan Guo Ce runner-up and FITI Top 8 (NSTC).'
+  },
+  {
+    value: 'AOCR Kaggle Champion',
+    label: 'Team captain; 1st of ~200 teams with >92% accuracy on acute appendicitis CT, held under the Asian Oceanian Congress of Radiology.'
+  },
+  {
+    value: '9 Papers · 4 First-Author',
+    label: '5 published or accepted; first-author papers at npj Digital Medicine (IF 18.0) and Biomedical Signal Processing and Control in revision.'
+  }
+];
 
 export const homeQuickFacts = [
   researchInterests,
-  'Current Focus: Advancing Medical AI by translating lesion-sensitive segmentation to clinical use, bridging the gap between algorithm development and real-world clinical deployment.',
-  'Technical Core: 3D MRI brain tumor segmentation, Non-contrast MRI analysis using knowledge distillation, and structurally constrained VLM-based report generation.',
-  'Academic Rigor: Submitted a first-author fundamental manuscript to Medical Image Analysis (IF=11.8) during the first year of a direct-entry Ph.D. program, alongside multiple accepted Oral Presentations.',
-  'Translational Scale: Led the development of end-to-end AI systems that have already successfully navigated Taiwan FDA (TFDA) and U.S. FDA regulatory pipelines, currently deployed in top-tier medical centers.'
+  'Current focus: finding small brain tumors earlier for stereotactic radiosurgery (+25 pts sensitivity on <4 mm lesions) and gadolinium-free detection that uses contrast MRI only during training.',
+  'Projects I lead at NYCU: LDCT/SDCT coronary artery calcium (CAC) and lung nodules, MRI brain tumors, and cerebral cavernous malformation (CCM).',
+  'Translation: from research to an FDA 510(k)-cleared brain-tumor SaMD in clinical use, plus DeepBT A+ (TFDA & FDA under review).',
+  'Entrepreneurship: CTO of NOVATERA, building computer-vision + VLM rehabilitation for long-term care — 14 partner institutions, 7 paying.'
 ];
 
 export const homeFeatureCards = [
   {
+    title: 'Five Roles at Once',
+    desc: 'Ph.D. research, product engineering, a startup, venture capital and teaching run in parallel — all on one theme: medical AI.'
+  },
+  {
     title: 'Bench-to-Bedside Translation',
-    desc: 'Deeply committed to Health Research that scales. My systems do not stop at paper publication; they are built for regulatory clearance (TFDA/FDA) and active integration into live medical workflows.'
+    desc: 'My systems do not stop at publication: they go through TFDA and U.S. FDA clearance and into live hospital workflows.'
   },
   {
     title: 'Methodological Rigor',
-    desc: 'Innovating at the foundation of Medical AI: developing DBI-MambaUNet for micro-lesion sensitivity and creating contrast-free inference frameworks using advanced knowledge distillation.'
+    desc: 'DBI-MambaUNet with a size-aware focal Tversky loss for micro-lesions, a validated cascade that cuts false positives per exam by 94.5%, and contrast-free inference via knowledge distillation.'
   },
   {
-    title: 'Recognized Leadership',
-    desc: 'Demonstrated capacity to orchestrate health tech projects—ranging from serving as CTO of an AI rehab platform to winning the prestigious AOCR Kaggle AI Challenge.'
-  },
-  {
-    title: 'Multimodal Clinical Synthesis',
-    desc: 'Pioneering end-to-end integration that goes beyond imaging masks to generate clinically sound, hallucination-resistant structured radiology reports via constrained LLMs.'
+    title: 'Founder & Field Builder',
+    desc: 'Beyond building NOVATERA’s on-device AI, I source and negotiate care-site partnerships; a 3-month pilot cut therapist documentation time from 43 to 28 minutes.'
   }
 ];
 
 export const education = [
   {
     school: 'National Yang Ming Chiao Tung University (NYCU), Taiwan',
-    period: '2024–Present',
+    period: '2024–2027 (expected)',
     degree: 'Direct-Entry Ph.D. Program, Institute of Biophotonics',
-    detail: 'Current GPA: 4.11 / 4.30'
-  },
-  {
-    school: 'Yuan Ze University, Taiwan',
-    period: '2020–2024',
-    degree: 'B.S., Department of Electrical Engineering',
-    detail: ''
+    detail: 'GPA: 4.11 / 4.30'
   }
 ];
 
 export const experience = [
   {
     org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
-    role: 'Ph.D. Researcher | Advisor: Prof. Yu-Te Wu',
-    period: '2024–Present',
+    role: 'Direct-Entry Ph.D. Researcher | Advisor: Prof. Yu-Te Wu',
+    period: '2024–2027 (expected)',
     bullets: [
-      'Focus: Knowledge distillation, MambaUNet architectures, and fully automated brain tumor SRS clinical systems achieving TFDA and U.S. FDA clearance.'
+      'Leading AI projects on LDCT/SDCT coronary artery calcium (CAC) and lung nodules, MRI brain tumors, and cerebral cavernous malformation (CCM).',
+      '<strong>+25 pts sensitivity on &lt;4 mm lesions</strong> (38.8% → 63.8%) with my DBI-MambaUNet + Size-Aware Focal Tversky Loss.',
+      'Built brain-tumor AI for stereotactic radiosurgery planning on <strong>11,000+ MRI exams</strong> from two medical centers.',
+      '<strong>Fewer false alarms:</strong> a validated cascade cuts false positives per exam by 94.5% (3.81 → 0.21) and types each lesion.',
+      '<strong>Gadolinium-free detection</strong> (ongoing): contrast MRI is used only in training, so the model reads non-contrast scans.'
     ]
   },
   {
-    org: 'NOVATERA (ICF Smart AI Rehabilitation System)',
-    role: 'Chief Technology Officer (CTO)',
-    period: '2025–2026',
+    org: 'AItewan BioMedical Technology (NYCU spin-off)',
+    role: 'Senior AI Engineer & Product Manager',
+    period: '2024–Present',
     bullets: [
-      'Led technical strategy and translational deployment for an AI-assisted home rehabilitation platform, selected as an MOE Model Success Case.'
+      'Building MRI brain-tumor SaMD (software as a medical device), from lab research to FDA clearance and hospital use.',
+      `<strong>U.S. FDA 510(k) K252190 + TFDA cleared</strong> — DeepBT Detector-Plus (co-developer, AI & system lead), in use at Taipei VGH, Taichung VGH and Shin Kong Hospital. <a href="${links.fdaRecord}" target="_blank" rel="noopener noreferrer">FDA record ↗</a>`,
+      `<strong>Led DeepBT A+</strong>, an MRI reading assistant unifying lesion analysis and report generation: 2,500+ clinical cases, report turnaround −58%; <strong>2026 FutureTech Award</strong>; TFDA &amp; FDA under review. <a href="${links.futexVideo}" target="_blank" rel="noopener noreferrer">Video ↗</a>`,
+      '<strong>Led a medical-AI workflow platform</strong> that turns brain-tumor images into finished reports — 23rd National Innovation Award.'
     ]
+  },
+  {
+    org: 'NOVATERA — AI rehabilitation for long-term care',
+    role: 'Chief Technology Officer (CTO)',
+    period: '2025–Present',
+    bullets: [
+      'Computer-vision + VLM rehabilitation for long-term-care day centers, using one RGB camera — no wearables.',
+      '<strong>Built the on-device AI:</strong> vision-language models for real-time posture guidance, motion tracking and auto reports.',
+      'Also <strong>sourced and negotiated care sites</strong>: 14 partner institutions, 7 paying; NT$687K revenue in the first 4 months.',
+      '<strong>3-month pilot:</strong> therapist documentation time 43 → 28 min (−35%); therapist satisfaction 4.3 / 5.',
+      `<strong>NT$1M U-start Merit Team</strong> · Zhan Guo Ce runner-up · FITI Top 8 · MOE success case. <a href="${links.ustartYahoo}" target="_blank" rel="noopener noreferrer">News ↗</a>`
+    ]
+  },
+  {
+    org: 'SparkLabs Taiwan (venture capital)',
+    role: 'Technical/Medical Fellow',
+    period: '2026–Present',
+    bullets: ['Deep-tech scouting and moat assessment of startups.']
   },
   {
     org: 'StanCode Programming Education Institute',
-    role: 'Instructor & AI Poster Mentor',
-    period: '2025–2026',
+    role: 'Instructor & AI Mentor (Teaching Team)',
+    period: '2025–Present',
     bullets: [
-      'Mentored student teams in translating fundamental computer vision and LLM concepts into practical, healthcare-oriented AI systems as an official instructor.'
+      'Mentored student teams in translating computer vision and LLM concepts into practical, healthcare-oriented AI systems.'
     ],
-    link: 'https://stancodetw.easy.co/',
-    linkLabel: 'Visit StanCode Website'
+    link: links.stancode,
+    linkLabel: 'StanCode Teaching Team'
   },
   {
-    org: 'AOCR Kaggle AI Challenge Project',
-    role: 'Research Team Leader',
+    org: 'AOCR Kaggle AI Challenge · YZU MISLab × Far Eastern Memorial Hospital',
+    role: 'Team Captain',
     period: '2023–2024',
     bullets: [
-      'Developed an acute appendicitis 3D CT segmentation framework, securing the championship and the 21st National Innovation Award.'
+      '1st of ~200 teams (>92% accuracy) on acute appendicitis CT, leading to the 21st National Innovation Award and a Taiwan patent.'
     ]
   },
   {
-    org: 'Omniguider Inc.',
-    role: 'Research / Development Project | Team Leader',
+    org: 'Omniguider Inc. (Foxconn)',
+    role: 'Deep Learning Intern',
     period: '2023–2024',
     bullets: [
-      'Implemented exhibit-specific generative imaging systems via ControlNet and LoRA, winning the national AI Application Challenge.'
+      'Built exhibit-specific generative imaging with ControlNet and LoRA — Excellence Award, AI Application Challenge (Ministry of Digital Affairs).'
     ]
   },
   {
     org: 'National Chung-Shan Institute of Science and Technology',
-    role: 'Research Project Intern / Member',
+    role: 'Research Intern',
     period: '2022–2023',
     bullets: [
-      'Built cGAN-based synthetic image generation workflows to resolve data scarcity constraints in edge deployment environments.'
+      'Built cGAN-based synthetic data and RGB→infrared translation workflows for drone vision.'
     ]
   }
 ];
 
 export const journalManuscripts = [
   {
-    venue: 'Medical Image Analysis',
-    impact: '11.8',
+    venue: 'npj Digital Medicine',
+    impact: '18.0',
     authorship: '1st author',
-    status: 'Under Peer Review',
+    status: 'In Revision',
     title:
-      'DBI-MambaUNet with Size-Aware Focal Tversky Loss: A Holistic Framework for Multi-Subtype Brain Tumor Micro-Lesion Segmentation in Stereotactic Radiosurgery.'
+      'DBI-MambaUNet with Size-Aware Focal Tversky Loss for Brain Tumor Detection in SRS-Related MRI: A Retrospective Internal Evaluation'
+  },
+  {
+    venue: 'Biomedical Signal Processing and Control',
+    impact: '5.7',
+    authorship: '1st author',
+    status: 'In Revision',
+    title:
+      'False-positive reduction and lesion-level tumor-type assignment in contrast-enhanced brain MRI: a validation-locked deep-learning cascade'
+  },
+  {
+    venue: 'Biomedicines',
+    impact: '4.5',
+    authorship: '4th author',
+    status: 'Published 2026, 14(7):1595',
+    title:
+      'AI-Assisted Brain Tumor MRI Reporting and Treatment-Planning Segmentation: A Retrospective Paired Workflow Evaluation',
+    link: links.biomedicines
   },
   {
     venue: 'Journal of Medical Systems',
@@ -141,7 +282,7 @@ export const journalManuscripts = [
     authorship: '3rd author',
     status: 'Under Peer Review',
     title:
-      'A Standards-Based, PACS-Native AI Integration Architecture for Background Inference in Radiology Reporting Workflows.'
+      'A Standards-Based, PACS-Native AI Integration Architecture for Background Inference in Radiology Reporting Workflows'
   },
   {
     venue: 'Computer Methods and Programs in Biomedicine',
@@ -149,52 +290,60 @@ export const journalManuscripts = [
     authorship: 'Co-author',
     status: 'Under Peer Review',
     title:
-      'Fully Automated AI-Based Aortic Quantification System for Opportunistic Aneurysm Detection on Routine CT.'
+      'Fully Automated AI-Based Aortic Quantification System for Opportunistic Aneurysm Detection on Routine CT'
   }
 ];
 
 export const conferencePresentations = [
   {
+    venue: 'IEEE AMLDS 2025',
+    authorship: '1st author',
+    title: 'Lightweight 3D IDC-MambaUNet for Multi-Modal MRI Brain Tumor Segmentation Using Multi-Resolution Ensemble',
+    note: 'Oral Presentation',
+    link: links.ieeeAmlds1
+  },
+  {
     venue: 'FOM 2025',
     authorship: '1st author',
-    title: 'Enhancing 3D MRI Brain Tumor Segmentation with Dynamic Window Filtering.',
+    title: 'Enhancing 3D MRI Brain Tumor Segmentation with Dynamic Window Filtering',
     note: 'Oral Presentation',
-    link: 'https://www.focusonmicroscopy.org/2025-program-online/?source=pp&event_id=8024&tab=pdf&a_id=8736'
+    link: links.fom
   },
   {
-    venue: 'IEEE AMLDS 2025',
-    authorship: '1st author',
-    title: 'Lightweight 3D IDC-MambaUNet for Multi-Modal MRI Brain Tumor Segmentation Using Multi-Resolution Ensemble.',
-    note: 'Oral Presentation',
-    link: 'https://ieeexplore.ieee.org/abstract/document/11159345'
+    venue: 'MIDL 2026',
+    authorship: '2nd author',
+    title: 'Lesion-Wise False-Positive Reduction for Brain Tumor Candidate Masks via Mask-Gated 2.5D Spatiotemporal Classification',
+    note: 'Poster (accepted)'
   },
   {
     venue: 'IEEE AMLDS 2025',
     authorship: '2nd author',
-    title: 'Real-time and Continuous AI Inference Workflow with PACS Integration.',
+    title: 'Real-time and Continuous AI Inference Workflow with PACS Integration',
     note: 'Oral Presentation',
-    link: 'https://ieeexplore.ieee.org/abstract/document/11159362'
-  },
-  {
-    venue: 'IEEE AMLDS 2026',
-    authorship: '2nd author',
-    title: 'Lesion-Wise False-Positive Reduction for Brain Tumor Candidate Masks in Multi-Modal MRI via Mask-Gated 2.5D Spatiotemporal Classification.',
-    note: 'Oral Presentation'
+    link: links.ieeeAmlds2
   }
 ];
 
+const ext = (url: string, text: string) =>
+  `<a href="${url}" target="_blank" rel="noopener noreferrer">${text} ↗</a>`;
+
 export const honors = [
-  '<strong>Champion, AOCR Kaggle AI Challenge</strong>, held under the Asian Oceanian Congress of Radiology (AOCR), one of the three major international radiology conferences.',
-  '<strong>21st National Innovation Award</strong> (Academic Innovation Award), Taiwan.',
-  '<strong>Served as startup CTO</strong>, participating in the FITI program and selected as a <strong>Model Success Case by MOE Taiwan</strong>.',
-  '<strong>Winner, AI Application Competition</strong>, Digital Industry Administration, Taiwan.',
-  'Shortlisted for the <strong>Smart Innovation Award</strong>.',
-  'Served as an <strong>Instructor and AI Poster Mentor</strong> at the StanCode Programming Education Institute, leading student teams in hands-on AI project deployments.'
+  '<strong>23rd National Innovation Award</strong> — Academic Innovation Award (2026), lead developer: <em>Medical-AI Workflow Integration Platform: Intelligent Assistance from Brain-Tumor Image Analysis to Report Generation</em>.',
+  `<strong>2026 FutureTech Award</strong>, National Science and Technology Council — lead developer &amp; named awardee: <em>DeepBT A+ Intelligent Brain Tumor MRI Reading Assistance System</em>. ${ext(links.futexVideo, 'Video')} ${ext(links.futexCtee, 'News')}`,
+  `<strong>U-start Merit Team, Manufacturing Technology — NT$1,000,000</strong> (Ministry of Education, 2026), NOVATERA. ${ext(links.ustartUdn, 'News')}`,
+  `<strong>Runner-up, 21st Zhan Guo Ce National Innovation &amp; Entrepreneurship Competition</strong> (2026), NOVATERA. ${ext(links.zgcNotice, 'Notice')}`,
+  '<strong>FITI — From IP to IPO Program</strong> (NSTC): Top 8 (2026) · Top 20 (2025), NOVATERA.',
+  `<strong>21st National Innovation Award</strong> — Academic Innovation Award (2024): <em>AI-Assisted Diagnosis System for Acute Appendicitis on Abdominal CT</em>. ${ext(links.nia21Award, 'Award page')}`,
+  '<strong>Champion, AOCR Kaggle AI Challenge</strong> (2024), Asian Oceanian Congress of Radiology.',
+  '<strong>Excellence Award, AI Application Challenge</strong> (2024), Ministry of Digital Affairs.',
+  'Shortlisted for the <strong>Smart Innovation Award</strong>.'
 ];
 
 export const innovation = [
-  'Co-developed AItewan DeepBT Detector–Plus, with both TFDA and U.S. FDA medical device approvals obtained.',
-  'Independently developed AItewan DeepBT Detector–A Plus, with TFDA and U.S. FDA medical device applications pending.'
+  `Co-developed <strong>AItewan DeepBT Detector-Plus</strong> (AI &amp; system lead): U.S. FDA 510(k) K252190 and TFDA cleared; in clinical use at three medical centers. ${ext(links.fdaRecord, 'FDA record')}`,
+  '<strong>Led DeepBT A+</strong> (lesion analysis + report generation): 2,500+ clinical cases, report turnaround −58%; 2026 FutureTech Award; TFDA &amp; FDA under review.',
+  'Led a <strong>medical-AI workflow integration platform</strong> from brain-tumor image analysis to report generation — 23rd National Innovation Award.',
+  'CTO of <strong>NOVATERA</strong>: on-device VLM rehabilitation in paid use at long-term-care sites.'
 ];
 
 export const patents = [
@@ -203,117 +352,226 @@ export const patents = [
 ];
 
 export const skills = {
-  programming: ['Python', 'PyTorch', 'MONAI', 'nnUNet', 'Git'],
+  programming: ['Python', 'PyTorch', 'MONAI', 'nnU-Net', 'Git', 'DICOM SEG/SR', 'PACS integration'],
   methods: [
-    'Computer vision',
-    '3D segmentation',
-    'Multimodal learning',
+    '3D segmentation & detection',
+    'Mamba architectures',
     'Knowledge distillation',
+    'Vision-language models',
+    'RAG',
     'GANs',
-    'Diffusion models',
-    'Vision-language modeling'
+    'Diffusion models'
   ],
-  evaluation: 'Model evaluation with lesion-wise sensitivity, precision, F1, FP/scan, and clinically oriented analysis.',
+  evaluation:
+    'Model evaluation with lesion-wise sensitivity, FP/scan, FROC/CPM, precision and F1, plus regulatory documentation for FDA 510(k).',
   languages: 'Mandarin Chinese (native), English (professional working proficiency)'
 };
 
+// Media & interviews (rendered on /media)
+export const media = [
+  { type: 'Video', title: 'Personal interview on the AOCR-winning AI', links: [{ text: 'YouTube', url: links.aocrVideo }] },
+  { type: 'Video', title: '2026 FutureTech Award — DeepBT A+', links: [{ text: 'YouTube', url: links.futexVideo }] },
+  {
+    type: 'Interview',
+    title: 'Taoyuan e-News interview as AOCR team captain',
+    links: [
+      { text: 'Yam', url: links.aocrYamInterview },
+      { text: 'LINE TODAY', url: links.aocrLineInterview }
+    ]
+  },
+  {
+    type: 'News',
+    title: '2026 FutureTech Award — DeepBT A+',
+    links: [
+      { text: 'CNA', url: links.futexCna },
+      { text: 'Business Today', url: links.futexBusinessToday },
+      { text: 'Commercial Times', url: links.futexCtee },
+      { text: 'TechNews', url: links.futexTechNews }
+    ]
+  },
+  {
+    type: 'News',
+    title: 'NOVATERA wins the NT$1M U-start award',
+    links: [
+      { text: 'Yahoo News', url: links.ustartYahoo },
+      { text: 'Liberty Times', url: links.ustartLtn },
+      { text: 'Economic Daily News', url: links.ustartUdn }
+    ]
+  },
+  {
+    type: 'News',
+    title: 'NOVATERA, runner-up at the 21st Zhan Guo Ce competition',
+    links: [
+      { text: 'U-start notice', url: links.zgcNotice },
+      { text: 'Yam', url: links.zgcYam }
+    ]
+  },
+  {
+    type: 'News',
+    title: 'DeepBT receives U.S. FDA 510(k) clearance',
+    links: [
+      { text: 'NYCU', url: links.nycuFda },
+      { text: 'FDA record', url: links.fdaRecord }
+    ]
+  },
+  {
+    type: 'News',
+    title: 'AOCR 2024 champion',
+    links: [
+      { text: 'Yahoo News', url: links.aocrYahoo },
+      { text: 'udn', url: links.aocrUdn },
+      { text: '1111', url: links.aocr1111 }
+    ]
+  },
+  {
+    type: 'News',
+    title: '21st National Innovation Award',
+    links: [
+      { text: 'LINE TODAY', url: links.nia21Line },
+      { text: '1111', url: links.nia21_1111 },
+      { text: 'Commercial Times', url: links.nia21Ctee }
+    ]
+  },
+  { type: 'Profile', title: 'StanCode Teaching Team', links: [{ text: 'StanCode', url: links.stancode }] },
+  { type: 'Profile', title: 'NOVATERA on the MOE success-case platform', links: [{ text: 'MOE', url: links.moeCase }] }
+];
+
 export const projectCards = [
   {
-    title: 'End-to-End Non-Contrast Brain Tumor SRS Clinical AI System',
-    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
-    role: 'Ph.D. Researcher',
-    period: '2024–Present',
-    tag: 'Flagship Research',
-    desc:
-      'An integrated research program centered on brain tumor stereotactic radiosurgery. It features an advanced pipeline combining lesion-sensitive segmentation, quantitative MRI analysis, and constrained VLM-based report generation—all enabled on non-contrast MRI via knowledge distillation.',
-    bullets: [
-      'Utilizes knowledge distillation to successfully detect and segment brain tumor lesions directly from non-contrast MRI scans.',
-      'Integrates non-contrast MRI lesion detection into a constrained vision-language system to automate clinically grounded report generation.',
-      'Encompasses core Ph.D. work on DBI-MambaUNet and SA-FTL while standardizing outputs into PACS-compatible DICOM SEG/SR.'
-    ]
-  },
-  {
-    title: 'DBI-MambaUNet + SA-FTL for Micro-Lesion Segmentation',
-    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
-    role: 'Ph.D. Researcher',
-    period: '2024–Present',
-    tag: 'Method Development',
-    desc:
-      'A dedicated method-development project for multi-subtype brain tumor micro-lesion analysis in stereotactic radiosurgery, with explicit focus on improving lesion sensitivity for small lesions.',
-    bullets: [
-      'Core manuscript currently under review at Medical Image Analysis.',
-      'Designed to improve sensitivity for sub-4 mm lesions while maintaining clinical relevance.',
-      'Represents the most method-centric part of the current Ph.D. work.'
-    ]
-  },
-  {
-    title: 'AItewan DeepBT Detector–Plus',
+    title: 'DeepBT A+: Brain-Tumor MRI Reading Assistant',
     org: 'AItewan BioMedical Technology Inc.',
-    role: 'Senior AI Engineer & Product Manager',
+    role: 'Lead Developer · Senior AI Engineer & PM',
     period: 'Ongoing',
-    tag: 'Medical AI Product',
-    desc:
-      'A clinically oriented brain tumor AI product successfully transitioning from research to clinical validation. It has achieved both Taiwan FDA (TFDA) and U.S. FDA (510(k)) clearance. It is now officially deployed and in actual clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
-    bullets: [
-      'Successfully advanced the system through rigorous TFDA certification pipelines.',
-      'Led the product integration and deployment across multiple top-tier medical centers in Taiwan.',
-      'Bridged the gap between advanced medical AI research and real-world clinical applications.'
-    ]
-  },
-  {
-    title: 'AItewan DeepBT Detector–A Plus',
-    org: 'AItewan BioMedical Technology Inc.',
-    role: 'Senior AI Engineer & Product Manager',
-    period: 'Ongoing',
-    tag: 'Medical AI Product',
-    desc:
-      'An advanced brain tumor AI product driving the next generation of diagnostics. Strongly positioned for both Taiwan FDA (TFDA) and U.S. FDA medical device applications. Like its predecessor, this system has already been deployed for clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
-    bullets: [
-      'Accelerating regulatory compliance and application processes for upcoming TFDA and U.S. FDA approvals.',
-      'Achieved rapid clinical deployment and validation in major medical center workflows.',
-      'Demonstrates independent technical leadership and strong capabilities in establishing robust, product-facing medical AI.'
-    ]
-  },
-  {
-    title: 'NOVATERA: ICF Smart AI Rehabilitation System',
-    org: 'NOVATERA (ICF Smart AI Rehabilitation System)',
-    role: 'Chief Technology Officer (CTO)',
-    period: '2025–2026',
-    tag: 'Innovation / Entrepreneurship',
+    tag: '2026 FutureTech Award',
     links: [
-      { url: 'https://ssp.moe.gov.tw/cases/1387', text: 'View Project' }
+      { url: links.futexVideo, text: 'Award Video' },
+      { url: links.futexCna, text: 'CNA' },
+      { url: links.futexBusinessToday, text: 'Business Today' }
     ],
     desc:
-      'An AI-assisted rehabilitation platform designed for home and clinical environments, developed under CTO leadership with a focus on functional assessment, workflow design, and translational deployment.',
+      'A clinical-workflow system that unifies multi-task lesion analysis and report generation for brain-tumor MRI. It has supported 2,500+ clinical cases and cut report turnaround time by 58%, and is deployed for clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
     bullets: [
-      'Led technical strategy, system architecture, AI workflow design, and prototype development.',
-      'Selected as a Success Case on Taiwan Ministry of Education\'s College Innovation and Entrepreneurship Simulation Learning Platform.',
-      'Advanced through FITI and continued into entrepreneurship-oriented development programs.'
+      'Led development as lead developer; named awardee of the 2026 NSTC FutureTech Award.',
+      'TFDA and U.S. FDA applications under review.',
+      'Combines lesion detection, classification and structured report generation in one workflow.'
     ]
   },
   {
-    title: 'AOCR Kaggle AI Challenge: Acute Appendicitis CT Segmentation',
-    org: 'AOCR Kaggle AI Challenge Project',
-    role: 'Research Team Leader',
+    title: 'AItewan DeepBT Detector-Plus',
+    org: 'AItewan BioMedical Technology Inc.',
+    role: 'Co-developer · AI & System Lead',
+    period: 'Ongoing',
+    tag: 'U.S. FDA 510(k) + TFDA',
+    links: [
+      { url: links.fdaRecord, text: 'FDA Record' },
+      { url: links.nycuFda, text: 'NYCU News' }
+    ],
+    desc:
+      'A brain-tumor MRI SaMD that has achieved both U.S. FDA 510(k) (K252190) and Taiwan FDA clearance. It is in clinical use at Taipei Veterans General Hospital, Taichung Veterans General Hospital, and Shin Kong Wu Ho-Su Memorial Hospital.',
+    bullets: [
+      'Took the system through TFDA and U.S. FDA regulatory pipelines.',
+      'Led product integration and deployment across multiple medical centers in Taiwan.',
+      'Bridged medical AI research and real-world clinical use.'
+    ]
+  },
+  {
+    title: 'DBI-MambaUNet + SA-FTL for Small Brain-Tumor Detection',
+    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
+    role: 'Ph.D. Researcher · 1st author',
+    period: '2024–Present',
+    tag: 'npj Digital Medicine (in revision)',
+    desc:
+      'A method-development project for multi-subtype brain-tumor detection in stereotactic radiosurgery MRI, focused on lesions smaller than 4 mm.',
+    bullets: [
+      '+25 pts sensitivity on <4 mm lesions (38.8% → 63.8%).',
+      'Two-center cohort of 11,000+ paired MRI exams.',
+      'First-author manuscript in revision at npj Digital Medicine (IF 18.0).'
+    ]
+  },
+  {
+    title: 'Lesion-Wise False-Positive Reduction Cascade',
+    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
+    role: 'Ph.D. Researcher · 1st author',
+    period: '2025–Present',
+    tag: 'BSPC (in revision) · MIDL 2026',
+    desc:
+      'A validation-locked deep-learning cascade that removes false-positive candidates from brain-tumor detections and assigns a tumor type to each remaining lesion.',
+    bullets: [
+      'Cuts false positives per exam by 94.5% (3.81 → 0.21) on a temporal test set.',
+      'Five-class lesion typing: neuroma, meningioma, metastasis, glioma, pituitary adenoma.',
+      'Journal version in revision at BSPC; related paper accepted as a MIDL 2026 poster.'
+    ]
+  },
+  {
+    title: 'NOVATERA: AI Rehabilitation for Long-Term Care',
+    org: 'NOVATERA',
+    role: 'Chief Technology Officer (CTO)',
+    period: '2025–Present',
+    tag: 'Startup · NT$1M U-start Award',
+    links: [
+      { url: links.ustartYahoo, text: 'U-start News' },
+      { url: links.zgcNotice, text: 'Zhan Guo Ce' },
+      { url: links.moeCase, text: 'MOE Success Case' }
+    ],
+    desc:
+      'Computer-vision + vision-language-model rehabilitation for long-term-care day centers. It runs on existing devices with one RGB camera — no wearables — giving real-time posture guidance, motion tracking and automatic training reports.',
+    bullets: [
+      'Built the on-device AI and also sourced and negotiated care-site partnerships: 14 partner institutions, 7 paying.',
+      'NT$687K revenue in the first four months; a 3-month pilot cut therapist documentation time from 43 to 28 minutes.',
+      'NT$1M U-start Merit Team · Zhan Guo Ce runner-up · FITI Top 8 · MOE success case.'
+    ]
+  },
+  {
+    title: 'Medical-AI Workflow Integration Platform',
+    org: 'NYCU × AItewan BioMedical Technology',
+    role: 'Lead Developer',
+    period: 'Ongoing',
+    tag: '23rd National Innovation Award',
+    desc:
+      'A workflow platform that carries brain-tumor MRI from image analysis to a finished report, built to fit into everyday radiology work.',
+    bullets: [
+      'Won the 23rd National Innovation Award — Academic Innovation Award.',
+      'Integrates lesion analysis and report generation into a single clinical workflow.'
+    ]
+  },
+  {
+    title: 'Gadolinium-Free Brain-Tumor Detection',
+    org: 'National Yang Ming Chiao Tung University, Institute of Biophotonics',
+    role: 'Ph.D. Researcher',
+    period: 'Ongoing',
+    tag: 'Flagship Research',
+    desc:
+      'Ongoing research that uses contrast-enhanced MRI only as training-time privileged information, so detection can run on non-contrast T1W + T2W scans and spare patients the contrast agent.',
+    bullets: [
+      'Knowledge-distillation approach evaluated with lesion-wise, low-FP FROC metrics.',
+      'Aims to connect non-contrast detection with constrained VLM-based report generation.',
+      'Outputs standardized as PACS-compatible DICOM SEG/SR.'
+    ]
+  },
+  {
+    title: 'AOCR Kaggle AI Challenge: Acute Appendicitis CT',
+    org: 'YZU MISLab × Far Eastern Memorial Hospital',
+    role: 'Team Captain',
     period: '2023–2024',
     tag: 'Challenge Champion',
     links: [
-      { url: 'https://www.youtube.com/watch?v=mWsgQmneuAs', text: 'Watch Interview' },
-      { url: 'https://innoaward.taiwan-healthcare.org/award_detail.php?REFDOCTYPID=0r4ggllnka0x43sh&num=1&REFDOCID=0sq2hwchxfqj17e7', text: 'National Innovation Award' }
+      { url: links.aocrVideo, text: 'Watch Interview' },
+      { url: links.aocr1111, text: 'News' },
+      { url: links.nia21Award, text: 'National Innovation Award' }
     ],
     desc:
-      'A 3D CT segmentation framework for acute appendicitis built for the AOCR Kaggle AI Challenge, emphasizing lesion-sensitive detection, localization, and clinically robust performance.',
+      'A 3D CT framework for acute appendicitis built for the AOCR Kaggle AI Challenge, combining 2D and 3D segmentation to flag inflamed appendices and key slices.',
     bullets: [
-      'Led the research team across model design, optimization, and evaluation.',
-      'Won the championship in a challenge organized under AOCR, one of the three major international radiology conferences.',
-      'Generated downstream impact including awards, patent protection, and media visibility.'
+      'Ranked 1st of ~200 teams with >92% accuracy.',
+      'Led to the 21st National Innovation Award and a Taiwan utility patent.',
+      'Covered by Yahoo News, udn and Taoyuan e-News.'
     ]
   },
   {
     title: 'Medication Delivery Robot Mentoring Project',
     org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
-    role: 'AI Poster Mentor',
-    period: '2025–2026',
+    role: 'AI Mentor',
+    period: '2025–Present',
     tag: 'Mentoring',
     links: [
       { url: 'https://www.youtube.com/watch?v=lPeceu56i4k&list=PL6FWNwNPGCE69AJLQYmrkA5wPXB5dv64O&index=7', text: 'YouTube' },
@@ -330,8 +588,8 @@ export const projectCards = [
   {
     title: 'Medication Recognition App with RAG + LLM',
     org: 'StanCode (founded by a Stanford alumnus, John Stephens Jr. Memorial Award recipient)',
-    role: 'AI Poster Mentor',
-    period: '2025–2026',
+    role: 'AI Mentor',
+    period: '2025–Present',
     tag: 'Mentoring',
     links: [
       { url: 'https://www.youtube.com/watch?v=n2ykwdTq7KY&list=PL6FWNwNPGCE69AJLQYmrkA5wPXB5dv64O&index=4', text: 'YouTube' },
@@ -347,8 +605,8 @@ export const projectCards = [
   },
   {
     title: 'Interactive Museum Imaging System',
-    org: 'Omniguider Inc.',
-    role: 'Research / Development Project | Team Leader',
+    org: 'Omniguider Inc. (Foxconn)',
+    role: 'Deep Learning Intern',
     period: '2023–2024',
     tag: 'Generative Vision',
     desc:
@@ -362,7 +620,7 @@ export const projectCards = [
   {
     title: 'Drone Vision Data Expansion and RGB-to-Infrared Translation',
     org: 'National Chung-Shan Institute of Science and Technology',
-    role: 'Research Project Intern / Member',
+    role: 'Research Intern',
     period: '2022–2023',
     tag: 'Aerial Vision',
     desc:

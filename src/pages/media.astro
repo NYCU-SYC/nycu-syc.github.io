@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { media } from '../data/site';
+---
+<BaseLayout path="/media" title="Media & Interviews">
+  <section class="page-hero">
+    <div class="container narrow">
+      <SectionHeading eyebrow="In the News" title="Media & Interviews" intro="Interviews, award videos, news coverage and profile pages for my research, products and startup." />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <div class="media-grid single">
+        {media.map((m) => (
+          <article class="media-item">
+            <span class={`media-type t-${m.type.toLowerCase()}`}>{m.type}</span>
+            <div>
+              <h3>{m.title}</h3>
+              <div class="media-links">
+                {m.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.text} ↗</a>)}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
