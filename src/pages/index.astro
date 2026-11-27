@@ -12,7 +12,8 @@ import {
   projectCards,
   homeQuickFacts,
   homeFeatureCards,
-  media
+  media,
+  gallery
 } from '../data/site';
 
 // Timeline axis: Jan 2024 → "now" (build date). Bars start at each role's start year.
@@ -222,6 +223,14 @@ const featuredOutlets = [
   <section class="section alt-bg">
     <div class="container">
       <SectionHeading eyebrow="In the News" title="Media & Interviews" intro="Interviews, award videos and news coverage of my projects." />
+      <div class="gallery strip">
+        {gallery.slice(0, 4).map((g) => (
+          <a class="gallery-item" href={g.link} target="_blank" rel="noopener noreferrer">
+            <img src={g.src} alt={g.caption} loading="lazy" />
+            <span>{g.caption}</span>
+          </a>
+        ))}
+      </div>
       <div class="media-grid">
         {media.slice(0, 6).map((m) => (
           <article class="media-item">

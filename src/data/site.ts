@@ -31,7 +31,11 @@ export const links = {
   biomedicines: 'https://www.mdpi.com/2227-9059/14/7/1595',
   ieeeAmlds1: 'https://ieeexplore.ieee.org/abstract/document/11159345',
   ieeeAmlds2: 'https://ieeexplore.ieee.org/abstract/document/11159362',
-  fom: 'https://www.focusonmicroscopy.org/2025-program-online/?source=pp&event_id=8024&tab=pdf&a_id=8736'
+  fom: 'https://www.focusonmicroscopy.org/2025-program-online/?source=pp&event_id=8024&tab=pdf&a_id=8736',
+  liFuturetechPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7507083660232290304/',
+  liHatcherPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7529617503866585089/',
+  liBioAsiaPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7491491652771938304/',
+  futexCertificate: '/images/futuretech-award-certificate.jpg'
 };
 
 // Age is computed at build time so it never goes stale between deploys.
@@ -329,7 +333,7 @@ const ext = (url: string, text: string) =>
 
 export const honors = [
   '<strong>23rd National Innovation Award</strong> — Academic Innovation Award (2026), lead developer: <em>Medical-AI Workflow Integration Platform: Intelligent Assistance from Brain-Tumor Image Analysis to Report Generation</em>.',
-  `<strong>2026 FutureTech Award</strong>, National Science and Technology Council — lead developer &amp; named awardee: <em>DeepBT A+ Intelligent Brain Tumor MRI Reading Assistance System</em>. ${ext(links.futexVideo, 'Video')} ${ext(links.futexCtee, 'News')}`,
+  `<strong>2026 FutureTech Award</strong>, National Science and Technology Council — lead developer &amp; named awardee: <em>DeepBT A+ Intelligent Brain Tumor MRI Reading Assistance System</em>. ${ext(links.futexCertificate, 'Certificate')} ${ext(links.futexVideo, 'Video')} ${ext(links.futexCtee, 'News')}`,
   `<strong>U-start Merit Team, Manufacturing Technology — NT$1,000,000</strong> (Ministry of Education, 2026), NOVATERA. ${ext(links.ustartUdn, 'News')}`,
   `<strong>Runner-up, 21st Zhan Guo Ce National Innovation &amp; Entrepreneurship Competition</strong> (2026), NOVATERA. ${ext(links.zgcNotice, 'Notice')}`,
   '<strong>FITI — From IP to IPO Program</strong> (NSTC): Top 8 (2026) · Top 20 (2025), NOVATERA.',
@@ -371,6 +375,7 @@ export const skills = {
 export const media = [
   { type: 'Video', title: 'Personal interview on the AOCR-winning AI', links: [{ text: 'YouTube', url: links.aocrVideo }] },
   { type: 'Video', title: '2026 FutureTech Award — DeepBT A+', links: [{ text: 'YouTube', url: links.futexVideo }] },
+  { type: 'Video', title: 'Talk at BIO Asia–Taiwan 2026 — DeepBT Detector A+', links: [{ text: 'LinkedIn', url: links.liBioAsiaPost }] },
   {
     type: 'Interview',
     title: 'Taoyuan e-News interview as AOCR team captain',
@@ -631,4 +636,14 @@ export const projectCards = [
       'Focused on practical deployment constraints for aerial computer vision systems.'
     ]
   }
+];
+
+// Photo highlights (rendered on /media and the home page)
+export const gallery = [
+  { src: '/images/futuretech-award-stage.jpg', caption: '2026 FutureTech Award ceremony — the DeepBT A+ team on stage', link: links.liFuturetechPost },
+  { src: '/images/futuretech-award-booth.jpg', caption: 'With the FutureTech Award at the 2026 FutureTech Pavilion (FUTEX)', link: links.liFuturetechPost },
+  { src: '/images/futuretech-award-certificate.jpg', caption: 'FutureTech Award certificate, NSTC — September 19, 2026', link: links.futexCertificate },
+  { src: '/images/bio-asia-2026-talk.jpg', caption: 'Presenting DeepBT Detector A+ at BIO Asia–Taiwan 2026', link: links.liBioAsiaPost },
+  { src: '/images/project-hatcher-showcase.jpg', caption: 'Project Hatcher × SparkLabs Taiwan Global Showcase Day, Nov 19, 2026', link: links.liHatcherPost },
+  { src: '/images/futuretech-award-with-advisor.jpg', caption: 'Celebrating the FutureTech Award in the Bio-tech & Medical Devices zone', link: links.liFuturetechPost }
 ];

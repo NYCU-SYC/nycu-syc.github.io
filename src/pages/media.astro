@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
-import { media } from '../data/site';
+import { media, gallery } from '../data/site';
 ---
 <BaseLayout path="/media" title="Media & Interviews">
   <section class="page-hero">
@@ -11,7 +11,22 @@ import { media } from '../data/site';
   </section>
 
   <section class="section">
+    <div class="container">
+      <SectionHeading eyebrow="Photos" title="Highlights" />
+      <div class="gallery">
+        {gallery.map((g) => (
+          <a class="gallery-item" href={g.link} target="_blank" rel="noopener noreferrer">
+            <img src={g.src} alt={g.caption} loading="lazy" />
+            <span>{g.caption}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container narrow">
+      <SectionHeading eyebrow="Coverage" title="Videos, Interviews & News" />
       <div class="media-grid single">
         {media.map((m) => (
           <article class="media-item">
