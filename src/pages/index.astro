@@ -3,16 +3,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import {
   siteMeta,
-  researchInterests,
+  links,
+  concurrentRoles,
   heroHighlights,
-  education,
   honors,
   innovation,
   patents,
   projectCards,
   homeQuickFacts,
-  homeFeatureCards
+  homeFeatureCards,
+  media
 } from '../data/site';
+
+// Timeline axis: Jan 2024 → "now" (build date). Bars start at each role's start year.
+const axisStart = 2024;
+const now = new Date();
+const axisEnd = now.getFullYear() + now.getMonth() / 12;
+const pct = (year: number) => Math.max(0, Math.min(100, ((year - axisStart) / (axisEnd - axisStart)) * 100));
+const years = [2024, 2025, 2026].filter((y) => y < axisEnd);
+const featuredOutlets = [
+  { text: 'YouTube interview', url: links.aocrVideo },
+  { text: 'Taoyuan e-News', url: links.aocrYamInterview },
+  { text: 'Liberty Times', url: links.ustartLtn },
+  { text: 'Business Today', url: links.futexBusinessToday },
+  { text: 'CNA', url: links.futexCna },
+  { text: 'Commercial Times', url: links.futexCtee }
+];
 ---
 <BaseLayout path="/">
   <section class="hero-section">
@@ -22,7 +38,7 @@ import {
           <img src="/profile.jpg" alt="Yi-Chen Sun" />
         </div>
         <h1>{siteMeta.title}</h1>
-        <p class="profile-role">Direct-Entry Ph.D. Student • Medical AI • Computer Vision</p>
+        <p class="profile-role">Ph.D. Researcher • AI Engineer &amp; PM • Startup CTO • VC Fellow • Instructor</p>
         <dl class="contact-grid">
           <div>
             <dt>Email</dt>
@@ -45,54 +61,101 @@ import {
         </dl>
         <div class="button-row stack">
           <a class="button primary" href={siteMeta.cvPdf}>Download CV</a>
+          <a class="button secondary" href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="button secondary" href="/contact">Contact</a>
         </div>
       </aside>
 
       <div class="hero-content">
         <article class="hero-card hero-intro">
-          <span class="eyebrow">Research Vision</span>
-          <h2>Translating fundamental medical AI into clinically resilient, real-world deployment.</h2>
-          <p class="lead" style="text-align: justify; text-justify: inter-word;">
-            I am a direct-entry Ph.D. student at National Yang Ming Chiao Tung University (NYCU) focused on
-            <strong>Health Research</strong>. My work bridges the gap between clinically-aligned, rigorous algorithm development—such as my proposed DBI-MambaUNet and Size-Aware Focal Tversky Loss for micro-lesion sensitivity—and the stringent demands of actual medical workflows.
+          <span class="eyebrow">Research · Product · Startup · Venture Capital · Teaching</span>
+          <h2>Medical AI from every angle, at once.</h2>
+          <p class="lead">
+            I am a direct-entry Ph.D. researcher at National Yang Ming Chiao Tung University (NYCU), graduating in 2027.
+            In parallel I build FDA-cleared brain-tumor software as a Senior AI Engineer &amp; PM at AItewan, lead technology
+            as CTO of NOVATERA, assess deep-tech startups as a Technical/Medical Fellow at SparkLabs Taiwan, and teach at StanCode.
           </p>
-          <p style="text-align: justify; text-justify: inter-word;">
-            Rather than stopping at theoretical performance, I build end-to-end systems. My research spans contrast-free brain tumor MRI analysis via knowledge distillation, the development of 3D medical vision-language models (VLM) for automated clinical report generation, hallucination-resistant structured reporting natively integrated with clinical PACS, and leading teams to scale TFDA/FDA-facing oncology systems.
+          <p>
+            Each role feeds the others: my research becomes AItewan’s products, shipping a cleared medical device shapes how
+            NOVATERA is built, the investor seat shows how teams like mine are judged, and teaching keeps me explaining it simply.
           </p>
           <div class="button-row">
             <a class="button primary" href="/publications">Publications</a>
             <a class="button secondary" href="/projects">Projects</a>
+            <a class="button secondary" href="/media">Media</a>
             <a class="button secondary" href="/cv">CV</a>
-            <a class="button secondary" href="/contact">Contact</a>
           </div>
         </article>
 
-        <div class="metrics-grid">
-          {heroHighlights.map((item) => (
-            <article class="metric-card">
-              <div class="metric-value">{item.value}</div>
-              <div class="metric-label">{item.label}</div>
-            </article>
-          ))}
-        </div>
+        <article class="hero-card roles-card">
+          <div class="roles-head">
+            <span class="eyebrow">Five roles, all held at the same time</span>
+          </div>
+          <div class="roles-timeline">
+            <div class="rt-row rt-axis" aria-hidden="true">
+              <span></span>
+              <div class="rt-track">
+                {years.map((y) => <span class="rt-year" style={`left:${pct(y)}%`}>{y}</span>)}
+                <span class="rt-now">NOW</span>
+              </div>
+            </div>
+            {concurrentRoles.map((r) => (
+              <div class="rt-row" style={`--c:${r.color}`}>
+                <div class="rt-label">
+                  <div class="rt-org">
+                    <i></i>
+                    {r.link ? <a href={r.link} target="_blank" rel="noopener noreferrer">{r.org}</a> : r.org}
+                    {r.note && <small>{r.note}</small>}
+                  </div>
+                  <div class="rt-role">{r.role}</div>
+                </div>
+                <div class="rt-track">
+                  {years.slice(1).map((y) => <span class="rt-grid" style={`left:${pct(y)}%`}></span>)}
+                  <span class="rt-bar" style={`left:${pct(r.start)}%`}></span>
+                </div>
+                <div class="rt-focus">{r.focus}</div>
+              </div>
+            ))}
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container feature-grid three-cols">
+    <div class="container">
+      <SectionHeading eyebrow="Track Record" title="Selected Results" />
+      <div class="metrics-grid results">
+        {heroHighlights.map((item) => (
+          <article class="metric-card">
+            <div class="metric-value">{item.value}</div>
+            <div class="metric-label">{item.label}</div>
+          </article>
+        ))}
+      </div>
+      <p class="featured-strip">
+        <span>Work featured in</span>
+        {featuredOutlets.map((o) => <a href={o.url} target="_blank" rel="noopener noreferrer">{o.text}</a>)}
+        <a class="more" href="/media">All media →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-column-layout">
       <div>
         <SectionHeading eyebrow="Honors" title="Selected Awards" />
         <article class="info-card"><ul class="bullet-list compact">{honors.map((item) => <li set:html={item} />)}</ul></article>
       </div>
-      <div>
-        <SectionHeading eyebrow="Translation" title="Innovation" />
-        <article class="info-card"><ul class="bullet-list compact">{innovation.map((item) => <li set:html={item} />)}</ul></article>
-      </div>
-      <div>
-        <SectionHeading eyebrow="IP" title="Patents" />
-        <article class="info-card"><ul class="bullet-list compact">{patents.map((item) => <li set:html={item} />)}</ul></article>
+      <div class="stack-cards">
+        <div>
+          <SectionHeading eyebrow="Translation" title="Innovation" />
+          <article class="info-card"><ul class="bullet-list compact">{innovation.map((item) => <li set:html={item} />)}</ul></article>
+        </div>
+        <div>
+          <SectionHeading eyebrow="IP" title="Patents" />
+          <article class="info-card"><ul class="bullet-list compact">{patents.map((item) => <li set:html={item} />)}</ul></article>
+        </div>
       </div>
     </div>
   </section>
@@ -125,7 +188,7 @@ import {
 
   <section class="section">
     <div class="container">
-      <SectionHeading eyebrow="Selected Projects" title="Featured Work" intro="A curated set of the most representative projects from research, mentoring, challenge leadership, and translational AI." />
+      <SectionHeading eyebrow="Selected Projects" title="Featured Work" intro="A curated set of the most representative projects across research, medical-device products, entrepreneurship and challenge leadership." />
       <div class="feature-grid two-cols">
         {projectCards.slice(0, 8).map((project) => (
           <article class="project-card project-card-rich">
@@ -152,6 +215,28 @@ import {
             )}
           </article>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <SectionHeading eyebrow="In the News" title="Media & Interviews" intro="Interviews, award videos and news coverage of my projects." />
+      <div class="media-grid">
+        {media.slice(0, 6).map((m) => (
+          <article class="media-item">
+            <span class={`media-type t-${m.type.toLowerCase()}`}>{m.type}</span>
+            <div>
+              <h3>{m.title}</h3>
+              <div class="media-links">
+                {m.links.map((l) => <a href={l.url} target="_blank" rel="noopener noreferrer">{l.text} ↗</a>)}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="button-row" style="margin-top: 1.2rem;">
+        <a class="button secondary" href="/media">All media &amp; interviews</a>
       </div>
     </div>
   </section>

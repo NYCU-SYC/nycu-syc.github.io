@@ -6,13 +6,13 @@ import { journalManuscripts, conferencePresentations } from '../data/site';
 <BaseLayout path="/publications" title="Publications">
   <section class="page-hero">
     <div class="container narrow">
-      <SectionHeading eyebrow="Research Output" title="Publications" intro="Selected journal manuscripts and conference presentations drawn from the current academic CV." />
+      <SectionHeading eyebrow="Research Output" title="Publications" intro="9 papers · 5 published or accepted · 4 first-author." />
     </div>
   </section>
 
   <section class="section">
     <div class="container narrow">
-      <SectionHeading eyebrow="Journal Manuscripts" title="Under Review" />
+      <SectionHeading eyebrow="Journal Papers" title="Journal Papers" />
       <div class="stack-cards">
         {journalManuscripts.map((paper) => (
           <article class="publication-card">
@@ -37,7 +37,7 @@ import { journalManuscripts, conferencePresentations } from '../data/site';
 
   <section class="section alt-bg">
     <div class="container narrow">
-      <SectionHeading eyebrow="Conference Presentations" title="Oral Presentations" />
+      <SectionHeading eyebrow="Conference Papers" title="Conference Papers" />
       <div class="stack-cards">
         {conferencePresentations.map((paper) => (
           <article class="publication-card">
