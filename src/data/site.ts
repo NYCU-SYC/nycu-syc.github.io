@@ -17,6 +17,7 @@ export const links = {
   zgcNotice: 'https://ustart.yda.gov.tw/p/405-1000-2223,c93.php?Lang=zh-tw',
   zgcYam: 'https://n.yam.com/Article/20260618131207',
   moeCase: 'https://ssp.moe.gov.tw/cases/1387',
+  fiti: 'https://fiti.stpi.niar.org.tw/global/6c4ec3cbb1334ea4b1343a86cbf39062',
   aocrVideo: 'https://www.youtube.com/watch?v=mWsgQmneuAs',
   aocr1111: 'https://www.1111.com.tw/news/jobns/155237',
   aocrYahoo: 'https://tw.news.yahoo.com/%E6%94%BE%E5%B0%84%E7%B7%9A%E9%86%AB%E5%AD%B8%E6%9C%83%E8%88%89%E8%BE%A6ai%E7%AB%B6%E8%B3%BD-%E5%85%83%E6%99%BA%E5%A4%A7%E5%AD%B8%E5%8F%8A%E4%BA%9E%E6%9D%B1%E9%86%AB%E9%99%A2%E7%A0%94%E7%A9%B6%E5%9C%98%E9%9A%8A%E6%A6%AE%E7%8D%B2%E7%AC%AC-013000326.html',
@@ -128,7 +129,7 @@ export const heroHighlights = [
   },
   {
     value: 'NT$1M Startup Award',
-    label: 'U-start Merit Team (Ministry of Education) as CTO of NOVATERA; also Zhan Guo Ce runner-up and FITI Top 8 (NSTC).'
+    label: 'U-start Merit Team (Ministry of Education) as CTO of NOVATERA; also Zhan Guo Ce runner-up and FITI Top 20 (NSTC).'
   },
   {
     value: 'AOCR Kaggle Champion',
@@ -209,7 +210,7 @@ export const experience = [
       '<strong>Built the on-device AI:</strong> vision-language models for real-time posture guidance, motion tracking and auto reports.',
       'Also <strong>sourced and negotiated care sites</strong>: 14 partner institutions, 7 paying; NT$687K revenue in the first 4 months.',
       '<strong>3-month pilot:</strong> therapist documentation time 43 → 28 min (−35%); therapist satisfaction 4.3 / 5.',
-      `<strong>NT$1M U-start Merit Team</strong> · Zhan Guo Ce runner-up · FITI Top 8 · MOE success case. <a href="${links.ustartYahoo}" target="_blank" rel="noopener noreferrer">News ↗</a>`
+      `<strong>NT$1M U-start Merit Team</strong> · Zhan Guo Ce runner-up · FITI Top 20 · MOE success case. <a href="${links.ustartYahoo}" target="_blank" rel="noopener noreferrer">News ↗</a>`
     ]
   },
   {
@@ -336,7 +337,7 @@ export const honors = [
   `<strong>2026 FutureTech Award</strong>, National Science and Technology Council — lead developer &amp; named awardee: <em>DeepBT A+ Intelligent Brain Tumor MRI Reading Assistance System</em>. ${ext(links.futexCertificate, 'Certificate')} ${ext(links.futexVideo, 'Video')} ${ext(links.futexCtee, 'News')}`,
   `<strong>U-start Merit Team, Manufacturing Technology — NT$1,000,000</strong> (Ministry of Education, 2026), NOVATERA. ${ext(links.ustartUdn, 'News')}`,
   `<strong>Runner-up, 21st Zhan Guo Ce National Innovation &amp; Entrepreneurship Competition</strong> (2026), NOVATERA. ${ext(links.zgcNotice, 'Notice')}`,
-  '<strong>FITI — From IP to IPO Program</strong> (NSTC): Top 8 (2026) · Top 20 (2025), NOVATERA.',
+  `<strong>FITI — From IP to IPO Program</strong> (NSTC): Top 20 (2026) · passed preliminary round (2025), NOVATERA. ${ext(links.fiti, 'Results')}`,
   `<strong>21st National Innovation Award</strong> — Academic Innovation Award (2024): <em>AI-Assisted Diagnosis System for Acute Appendicitis on Abdominal CT</em>. ${ext(links.nia21Award, 'Award page')}`,
   '<strong>Champion, AOCR Kaggle AI Challenge</strong> (2024), Asian Oceanian Congress of Radiology.',
   '<strong>Excellence Award, AI Application Challenge</strong> (2024), Ministry of Digital Affairs.',
@@ -368,7 +369,7 @@ export const skills = {
   ],
   evaluation:
     'Model evaluation with lesion-wise sensitivity, FP/scan, FROC/CPM, precision and F1, plus regulatory documentation for FDA 510(k).',
-  languages: 'Mandarin Chinese (native), English (professional working proficiency)'
+  languages: 'Mandarin Chinese (native), English (working proficiency)'
 };
 
 // Media & interviews (rendered on /media)
@@ -523,7 +524,7 @@ export const projectCards = [
     bullets: [
       'Built the on-device AI and also sourced and negotiated care-site partnerships: 14 partner institutions, 7 paying.',
       'NT$687K revenue in the first four months; a 3-month pilot cut therapist documentation time from 43 to 28 minutes.',
-      'NT$1M U-start Merit Team · Zhan Guo Ce runner-up · FITI Top 8 · MOE success case.'
+      'NT$1M U-start Merit Team · Zhan Guo Ce runner-up · FITI Top 20 · MOE success case.'
     ]
   },
   {
